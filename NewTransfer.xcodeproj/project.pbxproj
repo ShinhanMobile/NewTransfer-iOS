@@ -16,6 +16,8 @@
 		436E1A5426952E9A0002BD8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E1A5226952E9A0002BD8F /* LaunchScreen.storyboard */; };
 		436E1A5F26952E9A0002BD8F /* NewTransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A5E26952E9A0002BD8F /* NewTransferTests.swift */; };
 		436E1A6A26952E9A0002BD8F /* NewTransferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A6926952E9A0002BD8F /* NewTransferUITests.swift */; };
+		436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A7E269573F00002BD8F /* TransferManager.swift */; };
+		436E1A8A269578680002BD8F /* TransferManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A89269578680002BD8F /* TransferManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		436E1A6526952E9A0002BD8F /* NewTransferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewTransferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E1A6926952E9A0002BD8F /* NewTransferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransferUITests.swift; sourceTree = "<group>"; };
 		436E1A6B26952E9A0002BD8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		436E1A7E269573F00002BD8F /* TransferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManager.swift; sourceTree = "<group>"; };
+		436E1A89269578680002BD8F /* TransferManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		436E1A4326952E990002BD8F /* NewTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				436E1A7D269573DE0002BD8F /* TransferManager */,
 				436E1A4426952E990002BD8F /* AppDelegate.swift */,
 				436E1A4626952E990002BD8F /* SceneDelegate.swift */,
 				436E1A4826952E990002BD8F /* ViewController.swift */,
@@ -118,6 +123,7 @@
 			children = (
 				436E1A5E26952E9A0002BD8F /* NewTransferTests.swift */,
 				436E1A6026952E9A0002BD8F /* Info.plist */,
+				436E1A89269578680002BD8F /* TransferManagerTests.swift */,
 			);
 			path = NewTransferTests;
 			sourceTree = "<group>";
@@ -129,6 +135,14 @@
 				436E1A6B26952E9A0002BD8F /* Info.plist */,
 			);
 			path = NewTransferUITests;
+			sourceTree = "<group>";
+		};
+		436E1A7D269573DE0002BD8F /* TransferManager */ = {
+			isa = PBXGroup;
+			children = (
+				436E1A7E269573F00002BD8F /* TransferManager.swift */,
+			);
+			path = TransferManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				436E1A4926952E990002BD8F /* ViewController.swift in Sources */,
+				436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */,
 				436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */,
 				436E1A4726952E990002BD8F /* SceneDelegate.swift in Sources */,
 				436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */,
@@ -272,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436E1A8A269578680002BD8F /* TransferManagerTests.swift in Sources */,
 				436E1A5F26952E9A0002BD8F /* NewTransferTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
