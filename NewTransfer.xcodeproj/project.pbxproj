@@ -82,6 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		435F42AE269593810008B58B /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		436E1A3826952E990002BD8F = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +112,7 @@
 		436E1A4326952E990002BD8F /* NewTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				435F42AE269593810008B58B /* NetworkManager */,
 				436E1A7D269573DE0002BD8F /* TransferManager */,
 				436E1A4426952E990002BD8F /* AppDelegate.swift */,
 				436E1A4626952E990002BD8F /* SceneDelegate.swift */,
