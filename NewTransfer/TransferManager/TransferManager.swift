@@ -33,15 +33,39 @@ class TransferManager {
 	var transferAmount: String?					// 이체 금액
 }
 
+#if TEST
+class TransferManagerStub {
+	static let shared = TransferManagerStub()
+
+	private init() {}
+
+	var trxKey: String?							// 거래 일련번호
+	var defaultAuthType: DefaultAuthType?		// 기본 인증 타입: 계좌 비밀번호 or 로그인 인증
+	var securityAuthType: SecurityAuthType?		// 보안매체 인증 타입
+	var transferAmount: String?					// 이체 금액
+}
+#endif
+
 protocol TransferManagerInjector {
 	var transferManager: TransferManager { get }
 }
 
 extension TransferManagerInjector {
 	var transferManager: TransferManager {
+		#if TEST
+		return TransferManagerStub.shared
+		#else
 		return TransferManager.shared
+		#endif
 	}
+
+	#if TEST
+	func resetStub() {
+		transferManager = TransferManagerStub.shared
+	}
+	#endif
 }
+
 
 class SampleViewController: UIViewController {
 }

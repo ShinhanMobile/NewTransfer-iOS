@@ -12,11 +12,12 @@ import XCTest
 
 class TransferManagerTests: XCTestCase {
 
-	var transferManagerStub: TransferManagerStub = TransferManagerStub()
+//	var transferManagerStub: TransferManagerStub = TransferManagerStub()
 	var sampleViewController: SampleViewController = SampleViewController()
 
 	override func setUp() {
 		super.setUp()
-		sampleViewController.transferManager = self.transferManagerStub
+//		sampleViewController.transferManager = self.transferManagerStub
+		sampleViewController.resetStub
 	}
 }
