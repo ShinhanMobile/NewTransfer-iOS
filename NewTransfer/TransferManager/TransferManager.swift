@@ -25,24 +25,33 @@ enum SecurityAuthType {
 class TransferManager {
 	static let shared = TransferManager()
 
-	private init() {}
+	init() {}
+	// private init() {}	// Test용 stub을 만드려면 private을 사용 못함
 
 	var trxKey: String?							// 거래 일련번호
 	var defaultAuthType: DefaultAuthType?		// 기본 인증 타입: 계좌 비밀번호 or 로그인 인증
 	var securityAuthType: SecurityAuthType?		// 보안매체 인증 타입
 	var transferAmount: String?					// 이체 금액
+
+	func getTrxKey() -> String? {
+		return trxKey
+	}
 }
 
 #if TEST
-class TransferManagerStub {
-	static let shared = TransferManagerStub()
+class TransferManagerStub: TransferManager {
+	static let sharedStub = TransferManagerStub()
 
-	private init() {}
+	override init() {}
 
-	var trxKey: String?							// 거래 일련번호
-	var defaultAuthType: DefaultAuthType?		// 기본 인증 타입: 계좌 비밀번호 or 로그인 인증
-	var securityAuthType: SecurityAuthType?		// 보안매체 인증 타입
-	var transferAmount: String?					// 이체 금액
+//	var trxKey: String?							// 거래 일련번호
+//	var defaultAuthType: DefaultAuthType?		// 기본 인증 타입: 계좌 비밀번호 or 로그인 인증
+//	var securityAuthType: SecurityAuthType?		// 보안매체 인증 타입
+//	var transferAmount: String?					// 이체 금액
+
+	override func getTrxKey() -> String? {
+		return "TEST"
+	}
 }
 #endif
 
@@ -59,11 +68,11 @@ extension TransferManagerInjector {
 		#endif
 	}
 
-	#if TEST
-	func resetStub() {
-		transferManager = TransferManagerStub.shared
-	}
-	#endif
+//	#if TEST
+//	func resetStub() {
+//		transferManager = TransferManagerStub.shared
+//	}
+//	#endif
 }
 
 
@@ -71,7 +80,11 @@ class SampleViewController: UIViewController {
 }
 
 extension SampleViewController: TransferManagerInjector {
-	func authSample() {
-		transferManager.trxKey = "SHB"
+	func authSample() -> Bool {
+		if transferManager.getTrxKey() == "SHB" {
+			return true
+		} else {
+			return false
+		}
 	}
 }

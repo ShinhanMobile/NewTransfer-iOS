@@ -17,7 +17,14 @@ class TransferManagerTests: XCTestCase {
 
 	override func setUp() {
 		super.setUp()
-//		sampleViewController.transferManager = self.transferManagerStub
-		sampleViewController.resetStub
+//		sampleViewController.resetStub()
+
+	}
+
+
+	func testSampleYo() {
+		sampleViewController.transferManager.trxKey = "SHB"
+
+		XCTAssertTrue(sampleViewController.authSample())
 	}
 }
