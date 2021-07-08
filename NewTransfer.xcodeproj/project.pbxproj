@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4331C0C2269694840038C8AF /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331C0C1269694840038C8AF /* ApiConfig.swift */; };
+		4331C0C72696948E0038C8AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331C0C62696948E0038C8AF /* NetworkManager.swift */; };
 		435F42B02695958E0008B58B /* TransferManager+DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F42AF2695958E0008B58B /* TransferManager+DI.swift */; };
 		435F42B52695974D0008B58B /* TransferManager+DITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F42B42695974D0008B58B /* TransferManager+DITests.swift */; };
 		436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4426952E990002BD8F /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4331C0C1269694840038C8AF /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		4331C0C62696948E0038C8AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		435F42AF2695958E0008B58B /* TransferManager+DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferManager+DI.swift"; sourceTree = "<group>"; };
 		435F42B42695974D0008B58B /* TransferManager+DITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferManager+DITests.swift"; sourceTree = "<group>"; };
 		436E1A4126952E990002BD8F /* NewTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,8 @@
 		435F42AE269593810008B58B /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				4331C0C1269694840038C8AF /* ApiConfig.swift */,
+				4331C0C62696948E0038C8AF /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -293,7 +299,9 @@
 				436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */,
 				436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */,
 				436E1A4726952E990002BD8F /* SceneDelegate.swift in Sources */,
+				4331C0C72696948E0038C8AF /* NetworkManager.swift in Sources */,
 				436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */,
+				4331C0C2269694840038C8AF /* ApiConfig.swift in Sources */,
 				435F42B02695958E0008B58B /* TransferManager+DI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
