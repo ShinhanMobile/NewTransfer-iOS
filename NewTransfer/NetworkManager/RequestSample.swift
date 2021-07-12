@@ -48,7 +48,7 @@ class SampleTransferApi: NetworkApiInterface, RequestableBody {
 }
 
 func devNetworkSample() {
-	NetworkServerConfig.getBaseUrl(by: .dev)	// 서버 dev으로 세팅
+	NetworkServerConfig.setBaseUrl(by: .dev)	// 서버 dev으로 세팅
 
 	let requestBody = SampleTransferApi.TransferRequest(serviceCode: "SHB")
 
@@ -67,20 +67,31 @@ func devNetworkSample() {
 }
 
 func mockNetworkSample() {
-	NetworkServerConfig.getBaseUrl(by: .mock)	// 서버 mock으로 세팅
+	NetworkServerConfig.setBaseUrl(by: .mock)	// 서버 mock으로 세팅
 
 	let requestBody = SampleTransferApi.TransferRequest(serviceCode: "SHB")
 
 	let api = SampleTransferApi(body: requestBody)
 
-	let mockManager = NetworkManager.init(
-		session: MockURLSession<SampleTransferApi>.init(
-			result: .failure,
-			response: api
-		)
-	)
+//	let mockManager = NetworkManager.init(
+//		session: MockURLSession<SampleTransferApi>.init(
+//			result: .failure,
+//			response: api
+//		)
+//	)	// Unit Test code 작성시에만 MockURLSession 직접 주입
+//
+//	mockManager.fetch(by: api) { (result: Result<SampleTransferApi.Response, ApiError>) in
+//		switch result {
+//			case .success(let model):
+//				print(model)
+//			case .failure(let error):
+//				print(error)
+//		}
+//	}
 
-	mockManager.fetch(by: api) { (result: Result<SampleTransferApi.Response, ApiError>) in
+	let manager = NetworkManager.init()
+
+	manager.fetch(by: api) { (result: Result<SampleTransferApi.Response, ApiError>) in
 		switch result {
 			case .success(let model):
 				print(model)

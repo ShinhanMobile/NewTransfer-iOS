@@ -44,19 +44,19 @@ enum HttpMethod: String {
 	case DELETE
 }
 
-enum NetworkServerConfig: String {
+enum ServerConfig: String {
 	case dev = "https://devNewApp.shinhan.com/"
 	case mock = "https://mock/"
+	case test = ""
+}
+
+struct NetworkServerConfig {
 
 	static var baseUrl = ""		// base url이 mutable임... 어떻게 수정하지
+	static var server: ServerConfig = .dev
 
-	static func getBaseUrl(by server: NetworkServerConfig) {
-		switch server {
-			case .dev:
-				baseUrl = dev.rawValue
-			case .mock:
-				baseUrl = mock.rawValue
-		}
-
+	static func setBaseUrl(by server: ServerConfig) {
+		baseUrl = server.rawValue
+		NetworkServerConfig.server = server
 	}
 }
