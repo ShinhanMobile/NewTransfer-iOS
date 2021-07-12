@@ -23,6 +23,7 @@
 		436E1A6A26952E9A0002BD8F /* NewTransferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A6926952E9A0002BD8F /* NewTransferUITests.swift */; };
 		436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A7E269573F00002BD8F /* TransferManager.swift */; };
 		436E1A8A269578680002BD8F /* TransferManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A89269578680002BD8F /* TransferManagerTests.swift */; };
+		4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371339D269C636C0063DA32 /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		436E1A6B26952E9A0002BD8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		436E1A7E269573F00002BD8F /* TransferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManager.swift; sourceTree = "<group>"; };
 		436E1A89269578680002BD8F /* TransferManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManagerTests.swift; sourceTree = "<group>"; };
+		4371339D269C636C0063DA32 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				4331C0C1269694840038C8AF /* ApiConfig.swift */,
 				4331C0C62696948E0038C8AF /* NetworkManager.swift */,
+				4371339D269C636C0063DA32 /* MockNetworkManager.swift */,
 				4331C0CB269699580038C8AF /* RequestSample.swift */,
 			);
 			path = NetworkManager;
@@ -302,6 +305,7 @@
 				436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */,
 				436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */,
 				4331C0CC269699580038C8AF /* RequestSample.swift in Sources */,
+				4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */,
 				436E1A4726952E990002BD8F /* SceneDelegate.swift in Sources */,
 				4331C0C72696948E0038C8AF /* NetworkManager.swift in Sources */,
 				436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */,

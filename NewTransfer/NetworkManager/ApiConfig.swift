@@ -11,7 +11,9 @@ protocol NetworkApiInterface {
 	associatedtype Response: ApiResponsive
 	var url: URL { get }
 	var method: HttpMethod { get }
-	var responseSample: Data { get }	// Mock 통신 용
+//	#if DEBUG
+	var mockResponse: Data { get }	// Mock 통신 용
+//	#endif
 }
 
 protocol RequestableBody {

@@ -34,24 +34,53 @@ class SampleTransferApi: NetworkApiInterface, RequestableBody {
 
 	var method: HttpMethod = .POST
 
-	var responseSample: Data {
+	#if DEBUG
+	var mockResponse: Data {
 		Data(
 			"""
 			{
-				"output": "success"
+				"success": "Y"
 			}
 			""".utf8
 		)
 	}
+	#endif
 }
 
-func sample() {
-	NetworkServerConfig.getBaseUrl(by: .mock)	// 서버 mock으로 세팅
-	let manager = NetworkManager.init()
+func devNetworkSample() {
+	NetworkServerConfig.getBaseUrl(by: .dev)	// 서버 dev으로 세팅
+
 	let requestBody = SampleTransferApi.TransferRequest(serviceCode: "SHB")
+
 	let api = SampleTransferApi(body: requestBody)
 
+	let manager = NetworkManager.init()
+
 	manager.fetch(by: api) { (result: Result<SampleTransferApi.Response, ApiError>) in
+		switch result {
+			case .success(let model):
+				print(model)
+			case .failure(let error):
+				print(error)
+		}
+	}
+}
+
+func mockNetworkSample() {
+	NetworkServerConfig.getBaseUrl(by: .mock)	// 서버 mock으로 세팅
+
+	let requestBody = SampleTransferApi.TransferRequest(serviceCode: "SHB")
+
+	let api = SampleTransferApi(body: requestBody)
+
+	let mockManager = NetworkManager.init(
+		session: MockURLSession<SampleTransferApi>.init(
+			result: .failure,
+			response: api
+		)
+	)
+
+	mockManager.fetch(by: api) { (result: Result<SampleTransferApi.Response, ApiError>) in
 		switch result {
 			case .success(let model):
 				print(model)
