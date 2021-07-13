@@ -14,7 +14,7 @@
 		435F42B52695974D0008B58B /* TransferManager+DITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F42B42695974D0008B58B /* TransferManager+DITests.swift */; };
 		436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4426952E990002BD8F /* AppDelegate.swift */; };
 		436E1A4726952E990002BD8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4626952E990002BD8F /* SceneDelegate.swift */; };
-		436E1A4926952E990002BD8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4826952E990002BD8F /* ViewController.swift */; };
+		436E1A4926952E990002BD8F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4826952E990002BD8F /* MainViewController.swift */; };
 		436E1A4C26952E990002BD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E1A4A26952E990002BD8F /* Main.storyboard */; };
 		436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4D26952E990002BD8F /* NewTransfer.xcdatamodeld */; };
 		436E1A5126952E9A0002BD8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436E1A5026952E9A0002BD8F /* Assets.xcassets */; };
@@ -24,6 +24,14 @@
 		436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A7E269573F00002BD8F /* TransferManager.swift */; };
 		436E1A8A269578680002BD8F /* TransferManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A89269578680002BD8F /* TransferManagerTests.swift */; };
 		4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371339D269C636C0063DA32 /* MockNetworkManager.swift */; };
+		FA4211D7269D2B910095E9DB /* TransferRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */; };
+		FA4211D8269D2B910095E9DB /* TransferRecipientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */; };
+		FA4211E0269D2C3D0095E9DB /* TransferInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */; };
+		FA4211E6269D2C550095E9DB /* TransferAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211E4269D2C550095E9DB /* TransferAmountViewController.swift */; };
+		FA4211E7269D2C550095E9DB /* TransferAmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4211E5269D2C550095E9DB /* TransferAmountViewController.xib */; };
+		FA4211ED269D2C790095E9DB /* TransferCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */; };
+		FA4211EE269D2C790095E9DB /* TransferCompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4211EC269D2C790095E9DB /* TransferCompleteViewController.xib */; };
+		FA4211F4269D2C9E0095E9DB /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211F3269D2C9E0095E9DB /* Recipient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +60,7 @@
 		436E1A4126952E990002BD8F /* NewTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E1A4426952E990002BD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436E1A4626952E990002BD8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		436E1A4826952E990002BD8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		436E1A4826952E990002BD8F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		436E1A4B26952E990002BD8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		436E1A4E26952E990002BD8F /* NewTransfer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewTransfer.xcdatamodel; sourceTree = "<group>"; };
 		436E1A5026952E9A0002BD8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +75,14 @@
 		436E1A7E269573F00002BD8F /* TransferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManager.swift; sourceTree = "<group>"; };
 		436E1A89269578680002BD8F /* TransferManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManagerTests.swift; sourceTree = "<group>"; };
 		4371339D269C636C0063DA32 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecipientViewController.swift; sourceTree = "<group>"; };
+		FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecipientViewController.xib; sourceTree = "<group>"; };
+		FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferInfoManager.swift; sourceTree = "<group>"; };
+		FA4211E4269D2C550095E9DB /* TransferAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAmountViewController.swift; sourceTree = "<group>"; };
+		FA4211E5269D2C550095E9DB /* TransferAmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferAmountViewController.xib; sourceTree = "<group>"; };
+		FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompleteViewController.swift; sourceTree = "<group>"; };
+		FA4211EC269D2C790095E9DB /* TransferCompleteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferCompleteViewController.xib; sourceTree = "<group>"; };
+		FA4211F3269D2C9E0095E9DB /* Recipient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,14 +144,12 @@
 		436E1A4326952E990002BD8F /* NewTransfer */ = {
 			isa = PBXGroup;
 			children = (
-				435F42AE269593810008B58B /* NetworkManager */,
+				FA4211C4269D29540095E9DB /* App */,
+				FA4211CA269D298C0095E9DB /* Resource */,
+				FA4211C5269D295C0095E9DB /* Data */,
+				FA4211C6269D29620095E9DB /* Domain */,
+				FA4211C7269D296A0095E9DB /* Presentation */,
 				436E1A7D269573DE0002BD8F /* TransferManager */,
-				436E1A4426952E990002BD8F /* AppDelegate.swift */,
-				436E1A4626952E990002BD8F /* SceneDelegate.swift */,
-				436E1A4826952E990002BD8F /* ViewController.swift */,
-				436E1A4A26952E990002BD8F /* Main.storyboard */,
-				436E1A5026952E9A0002BD8F /* Assets.xcassets */,
-				436E1A5226952E9A0002BD8F /* LaunchScreen.storyboard */,
 				436E1A5526952E9A0002BD8F /* Info.plist */,
 				436E1A4D26952E990002BD8F /* NewTransfer.xcdatamodeld */,
 			);
@@ -169,6 +183,144 @@
 				435F42AF2695958E0008B58B /* TransferManager+DI.swift */,
 			);
 			path = TransferManager;
+			sourceTree = "<group>";
+		};
+		FA4211C4269D29540095E9DB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				436E1A4426952E990002BD8F /* AppDelegate.swift */,
+				436E1A4626952E990002BD8F /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA4211C5269D295C0095E9DB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211FD269D2CE00095E9DB /* RepositoryImpl */,
+				FA4211FE269D2CE60095E9DB /* DataSource */,
+				435F42AE269593810008B58B /* NetworkManager */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA4211C6269D29620095E9DB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211FC269D2CD60095E9DB /* Repository */,
+				FA4211FB269D2CCF0095E9DB /* UseCase */,
+				FA4211F2269D2C920095E9DB /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FA4211C7269D296A0095E9DB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211CE269D29CF0095E9DB /* MainScene */,
+				FA4211C8269D296F0095E9DB /* TransferScene */,
+				FA4211C9269D29790095E9DB /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FA4211C8269D296F0095E9DB /* TransferScene */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211D2269D2B260095E9DB /* Recipient */,
+				FA4211D3269D2B370095E9DB /* Amount */,
+				FA4211D4269D2B3D0095E9DB /* Complete */,
+			);
+			path = TransferScene;
+			sourceTree = "<group>";
+		};
+		FA4211C9269D29790095E9DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FA4211CA269D298C0095E9DB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				436E1A5026952E9A0002BD8F /* Assets.xcassets */,
+				436E1A5226952E9A0002BD8F /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FA4211CE269D29CF0095E9DB /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				436E1A4826952E990002BD8F /* MainViewController.swift */,
+				436E1A4A26952E990002BD8F /* Main.storyboard */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		FA4211D2269D2B260095E9DB /* Recipient */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */,
+				FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */,
+			);
+			path = Recipient;
+			sourceTree = "<group>";
+		};
+		FA4211D3269D2B370095E9DB /* Amount */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211E4269D2C550095E9DB /* TransferAmountViewController.swift */,
+				FA4211E5269D2C550095E9DB /* TransferAmountViewController.xib */,
+			);
+			path = Amount;
+			sourceTree = "<group>";
+		};
+		FA4211D4269D2B3D0095E9DB /* Complete */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */,
+				FA4211EC269D2C790095E9DB /* TransferCompleteViewController.xib */,
+			);
+			path = Complete;
+			sourceTree = "<group>";
+		};
+		FA4211F2269D2C920095E9DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA4211F3269D2C9E0095E9DB /* Recipient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA4211FB269D2CCF0095E9DB /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FA4211FC269D2CD60095E9DB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FA4211FD269D2CE00095E9DB /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		FA4211FE269D2CE60095E9DB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +427,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				436E1A5426952E9A0002BD8F /* LaunchScreen.storyboard in Resources */,
+				FA4211E7269D2C550095E9DB /* TransferAmountViewController.xib in Resources */,
 				436E1A5126952E9A0002BD8F /* Assets.xcassets in Resources */,
 				436E1A4C26952E990002BD8F /* Main.storyboard in Resources */,
+				FA4211EE269D2C790095E9DB /* TransferCompleteViewController.xib in Resources */,
+				FA4211D8269D2B910095E9DB /* TransferRecipientViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,16 +456,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				436E1A4926952E990002BD8F /* ViewController.swift in Sources */,
+				436E1A4926952E990002BD8F /* MainViewController.swift in Sources */,
 				436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */,
 				436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */,
 				4331C0CC269699580038C8AF /* RequestSample.swift in Sources */,
 				4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */,
+				FA4211F4269D2C9E0095E9DB /* Recipient.swift in Sources */,
+				FA4211E6269D2C550095E9DB /* TransferAmountViewController.swift in Sources */,
 				436E1A4726952E990002BD8F /* SceneDelegate.swift in Sources */,
 				4331C0C72696948E0038C8AF /* NetworkManager.swift in Sources */,
+				FA4211ED269D2C790095E9DB /* TransferCompleteViewController.swift in Sources */,
 				436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */,
+				FA4211E0269D2C3D0095E9DB /* TransferInfoManager.swift in Sources */,
 				4331C0C2269694840038C8AF /* ApiConfig.swift in Sources */,
 				435F42B02695958E0008B58B /* TransferManager+DI.swift in Sources */,
+				FA4211D7269D2B910095E9DB /* TransferRecipientViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
