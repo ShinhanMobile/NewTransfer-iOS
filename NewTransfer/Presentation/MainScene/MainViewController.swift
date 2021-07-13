@@ -8,11 +8,19 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    @IBAction func transferButtonClicked(_ sender: Any) {
+        
+        let transferRecipientVC = TransferRecipientViewController.init(transferInfoManager: TransferInfoManager())
+        
+        self.navigationController?.pushViewController(transferRecipientVC, animated: true)
+    }
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		mockNetworkSample()
 //		devNetworkSample()
 	}
+    
 }
 
