@@ -11,19 +11,25 @@ import XCTest
 
 class TransferManager_DITests: XCTestCase {
 
-	var sut: SampleTransferInteractor!
+	var sut: SampleTransferUseCase!
 
 	override func setUp() {
 		super.setUp()
 
 	}
 
+	class TransferAuthManagerSpy: TransferDataRepositoryInjector, AuthManagerProtocol {
+		func executeDefaultAuth() -> Bool {
+			return true
+		}
+	}
+
 	func testByRealTransferManager() {
 		// given
-		sut = .init(transferManager: TransferManager.shared)
+		sut = .init(transferAuthManager: TransferAuthManager())
 
 		// when
-		TransferManager.shared.trxKey = "trxKey"
+		TransferDataRepository.shared.trxKey = "trxKey"
 		let result = sut.transferExecute()
 
 		// then
@@ -38,7 +44,7 @@ class TransferManager_DITests: XCTestCase {
 
 	func testByTransferManagerStub() {
 		// given
-		sut = .init(transferManager: TransferManagerSpy())
+		sut = .init(transferAuthManager: TransferAuthManagerSpy())
 
 		// when
 		let result = sut.transferExecute()

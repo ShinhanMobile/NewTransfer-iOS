@@ -18,12 +18,9 @@ enum SecurityAuthType {
 	case securityCard
 }
 
-protocol AuthManagerProtocol {
-	func executeDefaultAuth() -> Bool
-}
-
-class TransferManager {
-	static let shared = TransferManager()
+// 이체 관련 데이터 저장소(수취인 조회 결과)
+class TransferDataRepository {
+	static let shared = TransferDataRepository()
 
 	private init() {}
 
@@ -31,15 +28,25 @@ class TransferManager {
 	var defaultAuthType: DefaultAuthType?		// 기본 인증 타입: 계좌 비밀번호 or 로그인 인증
 	var securityAuthType: SecurityAuthType?		// 보안매체 인증 타입
 	var transferAmount: String?					// 이체 금액
+}
 
-	func getTrxKey() -> String? {
-		return trxKey
+protocol TransferDataRepositoryInjector {
+	var transferDataRepository: TransferDataRepository { get }
+}
+
+extension TransferDataRepositoryInjector {	// 저장소 사용시 주입 받기
+	var transferDataRepository: TransferDataRepository {
+		return TransferDataRepository.shared
 	}
 }
 
-extension TransferManager: AuthManagerProtocol {
+protocol AuthManagerProtocol {
+	func executeDefaultAuth() -> Bool
+}
+
+class TransferAuthManager: TransferDataRepositoryInjector, AuthManagerProtocol {
 	func executeDefaultAuth() -> Bool {
-		if trxKey == nil {
+		if transferDataRepository.trxKey == nil {
 			return false
 		} else {
 			return true
@@ -49,16 +56,16 @@ extension TransferManager: AuthManagerProtocol {
 
 // ------ Dependency Injection & Inversion of Control
 
-class SampleTransferInteractor {
+class SampleTransferUseCase {
 
-	var transferManager: AuthManagerProtocol
+	var transferAuthManager: AuthManagerProtocol
 
-	init(transferManager: AuthManagerProtocol) {
-		self.transferManager = transferManager
+	init(transferAuthManager: AuthManagerProtocol) {
+		self.transferAuthManager = transferAuthManager
 	}
 
 	func transferExecute() -> Bool {
-		transferManager.executeDefaultAuth() ? print("이체 성공 :)") : print("이체 실패 :(")
-		return transferManager.executeDefaultAuth()
+		transferAuthManager.executeDefaultAuth() ? print("이체 성공 :)") : print("이체 실패 :(")
+		return transferAuthManager.executeDefaultAuth()
 	}
 }
