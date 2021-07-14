@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4847882EE21802023776A7 /* Pods_NewTransfer_NewTransferUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63796C87DF5C4CF6AB25DDEF /* Pods_NewTransfer_NewTransferUITests.framework */; };
 		4331C0C2269694840038C8AF /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331C0C1269694840038C8AF /* ApiConfig.swift */; };
 		4331C0C72696948E0038C8AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331C0C62696948E0038C8AF /* NetworkManager.swift */; };
 		4331C0CC269699580038C8AF /* RequestSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331C0CB269699580038C8AF /* RequestSample.swift */; };
@@ -24,6 +25,7 @@
 		436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A7E269573F00002BD8F /* TransferManager.swift */; };
 		436E1A8A269578680002BD8F /* TransferManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A89269578680002BD8F /* TransferManagerTests.swift */; };
 		4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371339D269C636C0063DA32 /* MockNetworkManager.swift */; };
+		7EDFAE6591F08B4ADAA4EC9C /* Pods_NewTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199C9E905C72392357DA6AD1 /* Pods_NewTransfer.framework */; };
 		FA4211D7269D2B910095E9DB /* TransferRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */; };
 		FA4211D8269D2B910095E9DB /* TransferRecipientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */; };
 		FA4211E0269D2C3D0095E9DB /* TransferInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */; };
@@ -32,6 +34,15 @@
 		FA4211ED269D2C790095E9DB /* TransferCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */; };
 		FA4211EE269D2C790095E9DB /* TransferCompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4211EC269D2C790095E9DB /* TransferCompleteViewController.xib */; };
 		FA4211F4269D2C9E0095E9DB /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211F3269D2C9E0095E9DB /* Recipient.swift */; };
+		FA421225269D4C850095E9DB /* TransferRecipientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421224269D4C850095E9DB /* TransferRecipientViewModel.swift */; };
+		FA42122F269D4EDD0095E9DB /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42122E269D4EDD0095E9DB /* Bank.swift */; };
+		FA42123A269D54D40095E9DB /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421239269D54D40095E9DB /* TransferViewModel.swift */; };
+		FA42123F269D55650095E9DB /* TransferAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42123E269D55650095E9DB /* TransferAmountViewModel.swift */; };
+		FA421244269D564C0095E9DB /* TransferCompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421243269D564C0095E9DB /* TransferCompleteViewModel.swift */; };
+		FA42124A269D5B3F0095E9DB /* FetchTransferBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421249269D5B3F0095E9DB /* FetchTransferBasicInfo.swift */; };
+		FA421252269D66300095E9DB /* TransferRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421251269D66300095E9DB /* TransferRepositoryProtocol.swift */; };
+		FA421263269D6AD30095E9DB /* TransferRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421262269D6AD30095E9DB /* TransferRepository.swift */; };
+		FD21520FB5AAA2695740EBE1 /* Pods_NewTransferTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674E9834D8447B665C70E832 /* Pods_NewTransferTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		199C9E905C72392357DA6AD1 /* Pods_NewTransfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewTransfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A481C19115DC0778C957858 /* Pods-NewTransferTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransferTests.debug.xcconfig"; path = "Target Support Files/Pods-NewTransferTests/Pods-NewTransferTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4331C0C1269694840038C8AF /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		4331C0C62696948E0038C8AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4331C0CB269699580038C8AF /* RequestSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSample.swift; sourceTree = "<group>"; };
@@ -75,6 +88,16 @@
 		436E1A7E269573F00002BD8F /* TransferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManager.swift; sourceTree = "<group>"; };
 		436E1A89269578680002BD8F /* TransferManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManagerTests.swift; sourceTree = "<group>"; };
 		4371339D269C636C0063DA32 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		46B08DE257E98A8EAB184EA7 /* Pods-NewTransferTests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransferTests.test.xcconfig"; path = "Target Support Files/Pods-NewTransferTests/Pods-NewTransferTests.test.xcconfig"; sourceTree = "<group>"; };
+		5004B99BB2309F4AB0610A02 /* Pods-NewTransfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransfer.release.xcconfig"; path = "Target Support Files/Pods-NewTransfer/Pods-NewTransfer.release.xcconfig"; sourceTree = "<group>"; };
+		531EE1F65F9A22D167B3B24F /* Pods-NewTransfer.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransfer.test.xcconfig"; path = "Target Support Files/Pods-NewTransfer/Pods-NewTransfer.test.xcconfig"; sourceTree = "<group>"; };
+		576F92FA21CB7203A4F744A0 /* Pods-NewTransferTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransferTests.release.xcconfig"; path = "Target Support Files/Pods-NewTransferTests/Pods-NewTransferTests.release.xcconfig"; sourceTree = "<group>"; };
+		63796C87DF5C4CF6AB25DDEF /* Pods_NewTransfer_NewTransferUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewTransfer_NewTransferUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		674E9834D8447B665C70E832 /* Pods_NewTransferTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewTransferTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6AE4580BEA8FAC26DAA733 /* Pods-NewTransfer-NewTransferUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransfer-NewTransferUITests.debug.xcconfig"; path = "Target Support Files/Pods-NewTransfer-NewTransferUITests/Pods-NewTransfer-NewTransferUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FC3E772A798970330FA1B6A /* Pods-NewTransfer-NewTransferUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransfer-NewTransferUITests.test.xcconfig"; path = "Target Support Files/Pods-NewTransfer-NewTransferUITests/Pods-NewTransfer-NewTransferUITests.test.xcconfig"; sourceTree = "<group>"; };
+		9156784EAF53EA6A4297CD58 /* Pods-NewTransfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransfer.debug.xcconfig"; path = "Target Support Files/Pods-NewTransfer/Pods-NewTransfer.debug.xcconfig"; sourceTree = "<group>"; };
+		E20D06CC30F59E113182003F /* Pods-NewTransfer-NewTransferUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransfer-NewTransferUITests.release.xcconfig"; path = "Target Support Files/Pods-NewTransfer-NewTransferUITests/Pods-NewTransfer-NewTransferUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecipientViewController.swift; sourceTree = "<group>"; };
 		FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecipientViewController.xib; sourceTree = "<group>"; };
 		FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferInfoManager.swift; sourceTree = "<group>"; };
@@ -83,6 +106,14 @@
 		FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompleteViewController.swift; sourceTree = "<group>"; };
 		FA4211EC269D2C790095E9DB /* TransferCompleteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferCompleteViewController.xib; sourceTree = "<group>"; };
 		FA4211F3269D2C9E0095E9DB /* Recipient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
+		FA421224269D4C850095E9DB /* TransferRecipientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecipientViewModel.swift; sourceTree = "<group>"; };
+		FA42122E269D4EDD0095E9DB /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		FA421239269D54D40095E9DB /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
+		FA42123E269D55650095E9DB /* TransferAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAmountViewModel.swift; sourceTree = "<group>"; };
+		FA421243269D564C0095E9DB /* TransferCompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompleteViewModel.swift; sourceTree = "<group>"; };
+		FA421249269D5B3F0095E9DB /* FetchTransferBasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTransferBasicInfo.swift; sourceTree = "<group>"; };
+		FA421251269D66300095E9DB /* TransferRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FA421262269D6AD30095E9DB /* TransferRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDFAE6591F08B4ADAA4EC9C /* Pods_NewTransfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD21520FB5AAA2695740EBE1 /* Pods_NewTransferTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C4847882EE21802023776A7 /* Pods_NewTransfer_NewTransferUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +162,8 @@
 				436E1A5D26952E9A0002BD8F /* NewTransferTests */,
 				436E1A6826952E9A0002BD8F /* NewTransferUITests */,
 				436E1A4226952E990002BD8F /* Products */,
+				CCD35F5734A3F5C78BB512A4 /* Pods */,
+				D483AD4C4B061553C5745A70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +221,33 @@
 			path = TransferManager;
 			sourceTree = "<group>";
 		};
+		CCD35F5734A3F5C78BB512A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9156784EAF53EA6A4297CD58 /* Pods-NewTransfer.debug.xcconfig */,
+				531EE1F65F9A22D167B3B24F /* Pods-NewTransfer.test.xcconfig */,
+				5004B99BB2309F4AB0610A02 /* Pods-NewTransfer.release.xcconfig */,
+				8A6AE4580BEA8FAC26DAA733 /* Pods-NewTransfer-NewTransferUITests.debug.xcconfig */,
+				8FC3E772A798970330FA1B6A /* Pods-NewTransfer-NewTransferUITests.test.xcconfig */,
+				E20D06CC30F59E113182003F /* Pods-NewTransfer-NewTransferUITests.release.xcconfig */,
+				2A481C19115DC0778C957858 /* Pods-NewTransferTests.debug.xcconfig */,
+				46B08DE257E98A8EAB184EA7 /* Pods-NewTransferTests.test.xcconfig */,
+				576F92FA21CB7203A4F744A0 /* Pods-NewTransferTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D483AD4C4B061553C5745A70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				199C9E905C72392357DA6AD1 /* Pods_NewTransfer.framework */,
+				63796C87DF5C4CF6AB25DDEF /* Pods_NewTransfer_NewTransferUITests.framework */,
+				674E9834D8447B665C70E832 /* Pods_NewTransferTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA4211C4269D29540095E9DB /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,7 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4211FC269D2CD60095E9DB /* Repository */,
-				FA4211FB269D2CCF0095E9DB /* UseCase */,
+				FA4211FB269D2CCF0095E9DB /* UseCases */,
 				FA4211F2269D2C920095E9DB /* Model */,
 			);
 			path = Domain;
@@ -230,6 +293,7 @@
 				FA4211D2269D2B260095E9DB /* Recipient */,
 				FA4211D3269D2B370095E9DB /* Amount */,
 				FA4211D4269D2B3D0095E9DB /* Complete */,
+				FA421239269D54D40095E9DB /* TransferViewModel.swift */,
 			);
 			path = TransferScene;
 			sourceTree = "<group>";
@@ -265,6 +329,7 @@
 			children = (
 				FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */,
 				FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */,
+				FA421224269D4C850095E9DB /* TransferRecipientViewModel.swift */,
 			);
 			path = Recipient;
 			sourceTree = "<group>";
@@ -274,6 +339,7 @@
 			children = (
 				FA4211E4269D2C550095E9DB /* TransferAmountViewController.swift */,
 				FA4211E5269D2C550095E9DB /* TransferAmountViewController.xib */,
+				FA42123E269D55650095E9DB /* TransferAmountViewModel.swift */,
 			);
 			path = Amount;
 			sourceTree = "<group>";
@@ -283,6 +349,7 @@
 			children = (
 				FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */,
 				FA4211EC269D2C790095E9DB /* TransferCompleteViewController.xib */,
+				FA421243269D564C0095E9DB /* TransferCompleteViewModel.swift */,
 			);
 			path = Complete;
 			sourceTree = "<group>";
@@ -291,20 +358,23 @@
 			isa = PBXGroup;
 			children = (
 				FA4211F3269D2C9E0095E9DB /* Recipient.swift */,
+				FA42122E269D4EDD0095E9DB /* Bank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FA4211FB269D2CCF0095E9DB /* UseCase */ = {
+		FA4211FB269D2CCF0095E9DB /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				FA421249269D5B3F0095E9DB /* FetchTransferBasicInfo.swift */,
 			);
-			path = UseCase;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		FA4211FC269D2CD60095E9DB /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				FA421251269D66300095E9DB /* TransferRepositoryProtocol.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -312,6 +382,7 @@
 		FA4211FD269D2CE00095E9DB /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
+				FA421262269D6AD30095E9DB /* TransferRepository.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -330,9 +401,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 436E1A6E26952E9A0002BD8F /* Build configuration list for PBXNativeTarget "NewTransfer" */;
 			buildPhases = (
+				4C56285AFE91A5A0BBE7E3D8 /* [CP] Check Pods Manifest.lock */,
 				436E1A3D26952E990002BD8F /* Sources */,
 				436E1A3E26952E990002BD8F /* Frameworks */,
 				436E1A3F26952E990002BD8F /* Resources */,
+				B49E96D176D708A14D7B63C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,6 +420,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 436E1A7126952E9A0002BD8F /* Build configuration list for PBXNativeTarget "NewTransferTests" */;
 			buildPhases = (
+				EEB554B5BCD4C63145C4DDB5 /* [CP] Check Pods Manifest.lock */,
 				436E1A5626952E9A0002BD8F /* Sources */,
 				436E1A5726952E9A0002BD8F /* Frameworks */,
 				436E1A5826952E9A0002BD8F /* Resources */,
@@ -365,9 +439,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 436E1A7426952E9A0002BD8F /* Build configuration list for PBXNativeTarget "NewTransferUITests" */;
 			buildPhases = (
+				5A5AB45874056F182966BFB6 /* [CP] Check Pods Manifest.lock */,
 				436E1A6126952E9A0002BD8F /* Sources */,
 				436E1A6226952E9A0002BD8F /* Frameworks */,
 				436E1A6326952E9A0002BD8F /* Resources */,
+				8CE8490001BAC725541DCDAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -451,26 +527,137 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C56285AFE91A5A0BBE7E3D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewTransfer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A5AB45874056F182966BFB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewTransfer-NewTransferUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CE8490001BAC725541DCDAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewTransfer-NewTransferUITests/Pods-NewTransfer-NewTransferUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewTransfer-NewTransferUITests/Pods-NewTransfer-NewTransferUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewTransfer-NewTransferUITests/Pods-NewTransfer-NewTransferUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B49E96D176D708A14D7B63C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewTransfer/Pods-NewTransfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewTransfer/Pods-NewTransfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewTransfer/Pods-NewTransfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB554B5BCD4C63145C4DDB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewTransferTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		436E1A3D26952E990002BD8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA421252269D66300095E9DB /* TransferRepositoryProtocol.swift in Sources */,
 				436E1A4926952E990002BD8F /* MainViewController.swift in Sources */,
+				FA42123A269D54D40095E9DB /* TransferViewModel.swift in Sources */,
 				436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */,
 				436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */,
+				FA421225269D4C850095E9DB /* TransferRecipientViewModel.swift in Sources */,
 				4331C0CC269699580038C8AF /* RequestSample.swift in Sources */,
+				FA42124A269D5B3F0095E9DB /* FetchTransferBasicInfo.swift in Sources */,
 				4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */,
 				FA4211F4269D2C9E0095E9DB /* Recipient.swift in Sources */,
+				FA421244269D564C0095E9DB /* TransferCompleteViewModel.swift in Sources */,
 				FA4211E6269D2C550095E9DB /* TransferAmountViewController.swift in Sources */,
 				436E1A4726952E990002BD8F /* SceneDelegate.swift in Sources */,
 				4331C0C72696948E0038C8AF /* NetworkManager.swift in Sources */,
 				FA4211ED269D2C790095E9DB /* TransferCompleteViewController.swift in Sources */,
 				436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */,
+				FA421263269D6AD30095E9DB /* TransferRepository.swift in Sources */,
 				FA4211E0269D2C3D0095E9DB /* TransferInfoManager.swift in Sources */,
 				4331C0C2269694840038C8AF /* ApiConfig.swift in Sources */,
+				FA42122F269D4EDD0095E9DB /* Bank.swift in Sources */,
 				435F42B02695958E0008B58B /* TransferManager+DI.swift in Sources */,
 				FA4211D7269D2B910095E9DB /* TransferRecipientViewController.swift in Sources */,
+				FA42123F269D55650095E9DB /* TransferAmountViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +777,7 @@
 		};
 		435F42A326957C550008B58B /* Test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 531EE1F65F9A22D167B3B24F /* Pods-NewTransfer.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -608,6 +796,7 @@
 		};
 		435F42A426957C550008B58B /* Test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B08DE257E98A8EAB184EA7 /* Pods-NewTransferTests.test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -629,6 +818,7 @@
 		};
 		435F42A526957C550008B58B /* Test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FC3E772A798970330FA1B6A /* Pods-NewTransfer-NewTransferUITests.test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -764,6 +954,7 @@
 		};
 		436E1A6F26952E9A0002BD8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9156784EAF53EA6A4297CD58 /* Pods-NewTransfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -782,6 +973,7 @@
 		};
 		436E1A7026952E9A0002BD8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5004B99BB2309F4AB0610A02 /* Pods-NewTransfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -800,6 +992,7 @@
 		};
 		436E1A7226952E9A0002BD8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A481C19115DC0778C957858 /* Pods-NewTransferTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -821,6 +1014,7 @@
 		};
 		436E1A7326952E9A0002BD8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 576F92FA21CB7203A4F744A0 /* Pods-NewTransferTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -842,6 +1036,7 @@
 		};
 		436E1A7526952E9A0002BD8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A6AE4580BEA8FAC26DAA733 /* Pods-NewTransfer-NewTransferUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -861,6 +1056,7 @@
 		};
 		436E1A7626952E9A0002BD8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E20D06CC30F59E113182003F /* Pods-NewTransfer-NewTransferUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

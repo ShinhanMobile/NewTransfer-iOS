@@ -16,10 +16,10 @@ class TransferCompleteViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    private var transferInfoManager: TransferInfoManager
+    private var viewModel: TransferCompleteViewModel
     
-    init(transferInfoManager: TransferInfoManager){
-        self.transferInfoManager = transferInfoManager
+    init(viewModel: TransferCompleteViewModel){
+        self.viewModel = viewModel
         super.init(nibName: "TransferCompleteViewController", bundle: nil)
     }
     
@@ -30,13 +30,13 @@ class TransferCompleteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureUI()
-    
+        bind()
     }
     
-    private func configureUI() {
-        recipientLabel.text = transferInfoManager.printRecipient()
-        amountLabel.text = transferInfoManager.amount
+    private func bind() {
+        let output = viewModel.transform(input: TransferCompleteViewModel.Input())
+        
+        recipientLabel.text = output.recipient
+        amountLabel.text = output.amount
     }
-
 }

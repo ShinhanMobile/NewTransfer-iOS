@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TransferAmountViewController: UIViewController {
 
     @IBOutlet weak var recipientLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
     
-    private var transferInfoManager: TransferInfoManager
+    private var viewModel: TransferAmountViewModel
     
-    init(transferInfoManager: TransferInfoManager){
-        self.transferInfoManager = transferInfoManager
+    init(viewModel: TransferAmountViewModel){
+        self.viewModel = viewModel
         super.init(nibName: "TransferAmountViewController", bundle: nil)
     }
     
@@ -27,14 +29,12 @@ class TransferAmountViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        bind()
     }
     
     private func configureUI() {
         
-        // 받는 분
-        self.recipientLabel.text = transferInfoManager.printRecipient()
-        
-        // 보낼 금액
+        // 보낼 금액 키패드
         self.amountTextField.keyboardType = UIKeyboardType.numberPad
         
         // 확인 버튼
@@ -53,16 +53,32 @@ class TransferAmountViewController: UIViewController {
         
         amountTextField.inputAccessoryView = toolbar
     }
+    
+    private func bind() {
+        
+        // viewModel bind
+        let output = viewModel.transform(
+            input: TransferAmountViewModel.Input(
+                amount: amountTextField.rx.text.asObservable()
+            )
+        )
+        
+        self.recipientLabel.text = output.recipient
+    }
 
     @objc func confirmButtonClicked() {
-        if let amount = self.amountTextField.text {
-            transferInfoManager.amount = amount
-            
-            let transferCompleteVC = TransferCompleteViewController(transferInfoManager: transferInfoManager)
-            transferCompleteVC.modalPresentationStyle = .fullScreen
-            present(transferCompleteVC, animated: false, completion: nil)
-            
-            self.navigationController?.popToRootViewController(animated: false)
-        }
+        routeToTransferComplete()
+    }
+    
+    private func routeToTransferComplete() {
+        let transferInfoManager = viewModel.transferInfoManager
+        let transferCompleteVC = TransferCompleteViewController(
+            viewModel: TransferCompleteViewModel(transferInfoManager: transferInfoManager)
+        )
+        
+        transferCompleteVC.modalPresentationStyle = .fullScreen
+        present(transferCompleteVC, animated: false, completion: nil)
+        
+        self.navigationController?.popToRootViewController(animated: false)
     }
 }

@@ -8,15 +8,19 @@
 import Foundation
 
 struct Recipient {
-    let bankName: String
+    let bank: Bank
     let accountNumber: String
     
     let name: String?
     
-    init(bankName: String, accountNumber: String) {
-        self.bankName = bankName
+    init(bank: Bank, accountNumber: String) {
+        self.bank = bank
         self.accountNumber = accountNumber
         
         self.name = nil
+    }
+    
+    func print() -> String {
+        return self.bank.name + " " + self.accountNumber
     }
 }
