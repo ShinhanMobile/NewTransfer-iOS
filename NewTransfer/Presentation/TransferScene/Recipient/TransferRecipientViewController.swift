@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class TransferRecipientViewController: UIViewController {
 
@@ -18,29 +19,28 @@ class TransferRecipientViewController: UIViewController {
         pickerView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 220)
         
         pickerView.backgroundColor = .white
-        pickerView.delegate = self
-        pickerView.dataSource = self
         
         return pickerView
     }()
     
-    var transferInfoManager: TransferInfoManager
-    var bankList: [String] = [ "신한", "우리", "국민", "농협" ]
+    var viewModel: TransferRecipientViewModel
     
-    init(transferInfoManager: TransferInfoManager){
-        self.transferInfoManager = transferInfoManager
+    let disposeBag = DisposeBag()
+    
+    init(viewModel: TransferRecipientViewModel){
+        self.viewModel = viewModel
         super.init(nibName: "TransferRecipientViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        self.transferInfoManager = TransferInfoManager()
-        super.init(coder: coder)
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+        bind()
     }
     
     private func configureUI() {
@@ -65,36 +65,50 @@ class TransferRecipientViewController: UIViewController {
         accountTextField.inputAccessoryView = toolbar
     }
     
+    private func bind() {
+        
+        let observableBank = PublishSubject<Bank>()
+        
+        bankPickerView.rx.modelSelected(Bank.self)
+            .subscribe(onNext: { [weak self] item in
+                guard let self = self else { return }
+                
+                if let selectedBank = item.first {
+                    observableBank.onNext(selectedBank)
+                    self.bankNameTextField.text = selectedBank.name
+                    self.bankNameTextField.endEditing(true)
+                }
+                
+            })
+            .disposed(by: disposeBag)
+        
+        // viewModel bind
+        let output = viewModel.transform(
+            input: TransferRecipientViewModel.Input(
+                selectedBank: observableBank,
+                accountNumber: accountTextField.rx.text.asObservable()
+            )
+        )
+        
+        output.bankList
+            .bind(to: bankPickerView.rx.itemTitles) { _, item in
+                return item.name
+            }
+            .disposed(by: disposeBag)
+        
+    }
+    
     @objc func confirmButtonClicked() {
-        if let bankName = self.bankNameTextField.text,
-           let accountNumber = self.accountTextField.text {
-            
-            let recipient = Recipient(bankName: bankName, accountNumber: accountNumber)
-            transferInfoManager.recipient = recipient
-            
-            let transferAmountVC = TransferAmountViewController(transferInfoManager: transferInfoManager)
-            self.navigationController?.pushViewController(transferAmountVC, animated: true)
-        }
+        routeToTransferAmount()
+    }
+    
+    private func routeToTransferAmount() {
+        let transferInfoManager = viewModel.transferInfoManager
+        let transferAmountVC = TransferAmountViewController(
+            viewModel: TransferAmountViewModel(transferInfoManager: transferInfoManager)
+        )
+        
+        self.navigationController?.pushViewController(transferAmountVC, animated: true)
     }
 }
 
-
-
-extension TransferRecipientViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return bankList.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return bankList[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        bankNameTextField.text = bankList[row]
-        bankNameTextField.endEditing(true)
-    }
-}

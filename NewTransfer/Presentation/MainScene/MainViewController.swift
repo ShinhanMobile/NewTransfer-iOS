@@ -11,7 +11,11 @@ class MainViewController: UIViewController {
     
     @IBAction func transferButtonClicked(_ sender: Any) {
         
-        let transferRecipientVC = TransferRecipientViewController.init(transferInfoManager: TransferInfoManager())
+        let transferRecipientVC = TransferRecipientViewController(
+            viewModel: TransferRecipientViewModel(
+                transferInfoManager: TransferInfoManager()
+            )
+        )
         
         self.navigationController?.pushViewController(transferRecipientVC, animated: true)
     }

@@ -12,11 +12,20 @@ class TransferInfoManager {
     var recipient: Recipient?       // 수취인
     var amount: String?             // 이체 금액
     
+    // 이거를 여기서 처리하는게 맞나?
     func printRecipient() -> String {
         guard let recipient = self.recipient else {
             return "수취인 조회 실패"
         }
         
-        return recipient.bankName + " " + recipient.accountNumber
+        return recipient.bank.name + " " + recipient.accountNumber
+    }
+    
+    func printAmount() -> String {
+        guard let amount = self.amount else {
+            return "이체 금액 없음"
+        }
+        
+        return amount + "원"
     }
 }
