@@ -9,6 +9,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol TransferRecipientVMCoordiDelegate {
+    func routeToAmountVC(transferInfoManager: TransferInfoManager)
+}
+
 class TransferRecipientViewModel: TransferViewModel {
     
     struct Input {
@@ -24,6 +28,7 @@ class TransferRecipientViewModel: TransferViewModel {
     
     private let disposeBag = DisposeBag()
     internal var transferInfoManager: TransferInfoManager
+    var coordinatorDelegate: TransferRecipientVMCoordiDelegate?
     
     init(
         transferInfoManager: TransferInfoManager
@@ -53,5 +58,8 @@ class TransferRecipientViewModel: TransferViewModel {
         return Output(bankList: bankList)
     }
 
+    func routeToAmountVC() {
+        self.coordinatorDelegate?.routeToAmountVC(transferInfoManager: self.transferInfoManager)
+    }
     
 }

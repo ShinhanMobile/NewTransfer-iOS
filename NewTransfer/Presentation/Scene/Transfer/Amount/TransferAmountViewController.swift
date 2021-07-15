@@ -67,18 +67,6 @@ class TransferAmountViewController: UIViewController {
     }
 
     @objc func confirmButtonClicked() {
-        routeToTransferComplete()
-    }
-    
-    private func routeToTransferComplete() {
-        let transferInfoManager = viewModel.transferInfoManager
-        let transferCompleteVC = TransferCompleteViewController(
-            viewModel: TransferCompleteViewModel(transferInfoManager: transferInfoManager)
-        )
-        
-        transferCompleteVC.modalPresentationStyle = .fullScreen
-        present(transferCompleteVC, animated: false, completion: nil)
-        
-        self.navigationController?.popToRootViewController(animated: false)
+        viewModel.routeToCompleteVC()
     }
 }

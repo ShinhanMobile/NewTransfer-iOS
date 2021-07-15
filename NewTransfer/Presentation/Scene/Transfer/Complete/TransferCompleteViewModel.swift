@@ -8,6 +8,10 @@
 import Foundation
 import RxSwift
 
+protocol TransferCompleteVMCoordiDelegate {
+    func dismissTransferVC()
+}
+
 class TransferCompleteViewModel: TransferViewModel {
 
     struct Input {
@@ -22,6 +26,8 @@ class TransferCompleteViewModel: TransferViewModel {
     private let disposeBag = DisposeBag()
     internal var transferInfoManager: TransferInfoManager
     
+    var coordinatorDelegate: TransferCompleteVMCoordiDelegate?
+    
     init(transferInfoManager: TransferInfoManager) {
         self.transferInfoManager = transferInfoManager
     }
@@ -32,5 +38,9 @@ class TransferCompleteViewModel: TransferViewModel {
             recipient: transferInfoManager.printRecipient(),
             amount: transferInfoManager.printAmount()
         )
+    }
+    
+    func dismiss() {
+        self.coordinatorDelegate?.dismissTransferVC()
     }
 }

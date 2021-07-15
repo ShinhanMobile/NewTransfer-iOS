@@ -13,7 +13,7 @@ class TransferCompleteViewController: UIViewController {
     @IBOutlet weak var amountLabel: UILabel!
     
     @IBAction func confirmButtonClicked(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        viewModel.dismiss()
     }
     
     private var viewModel: TransferCompleteViewModel

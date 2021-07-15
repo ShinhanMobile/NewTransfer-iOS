@@ -99,16 +99,16 @@ class TransferRecipientViewController: UIViewController {
     }
     
     @objc func confirmButtonClicked() {
-        routeToTransferAmount()
+        viewModel.routeToAmountVC()
     }
     
-    private func routeToTransferAmount() {
-        let transferInfoManager = viewModel.transferInfoManager
-        let transferAmountVC = TransferAmountViewController(
-            viewModel: TransferAmountViewModel(transferInfoManager: transferInfoManager)
-        )
-        
-        self.navigationController?.pushViewController(transferAmountVC, animated: true)
-    }
+//    private func routeToTransferAmount() {
+//        let transferInfoManager = viewModel.transferInfoManager
+//        let transferAmountVC = TransferAmountViewController(
+//            viewModel: TransferAmountViewModel(transferInfoManager: transferInfoManager)
+//        )
+//
+//        self.navigationController?.pushViewController(transferAmountVC, animated: true)
+//    }
 }
 
