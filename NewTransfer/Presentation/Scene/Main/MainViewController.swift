@@ -9,15 +9,10 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var delegate: MainSubCoordiDelegate?
+    
     @IBAction func transferButtonClicked(_ sender: Any) {
-        
-        let transferRecipientVC = TransferRecipientViewController(
-            viewModel: TransferRecipientViewModel(
-                transferInfoManager: TransferInfoManager()
-            )
-        )
-        
-        self.navigationController?.pushViewController(transferRecipientVC, animated: true)
+        self.delegate?.routeToTransfer()
     }
     
 	override func viewDidLoad() {

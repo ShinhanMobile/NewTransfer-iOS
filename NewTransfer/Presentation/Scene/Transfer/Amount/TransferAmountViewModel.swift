@@ -8,6 +8,10 @@
 import Foundation
 import RxSwift
 
+protocol TransferAmountVMCoordiDelegate {
+    func routeToCompleteVC()
+}
+
 class TransferAmountViewModel: TransferViewModel {
     
     struct Input {
@@ -20,6 +24,7 @@ class TransferAmountViewModel: TransferViewModel {
     
     private let disposeBag = DisposeBag()
     internal var transferInfoManager: TransferInfoManager
+    var coordinateDelegate: TransferAmountVMCoordiDelegate?
     
     init(transferInfoManager: TransferInfoManager) {
         self.transferInfoManager = transferInfoManager
@@ -35,6 +40,10 @@ class TransferAmountViewModel: TransferViewModel {
             .disposed(by: disposeBag)
         
         return Output(recipient: transferInfoManager.printRecipient())
+    }
+    
+    func routeToCompleteVC() {
+        self.coordinateDelegate?.routeToCompleteVC()
     }
     
 }
