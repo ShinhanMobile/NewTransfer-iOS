@@ -52,7 +52,8 @@ class MockURLSession<Request>: URLSessionProtocol where Request : NetworkApiInte
 		let sessionDataTask = MockURLSessionDataTask()
 
 		// resume() 이 호출되면 completionHandler() 가 호출되도록 합니다.
-		sessionDataTask.resumeDidCall = {
+		sessionDataTask.resumeDidCall = { [weak self] in
+			guard let self = self else { return }
 			switch self.networkResult {
 				case .success:
 					completionHandler(self.networkResponse, successResponse, nil)
