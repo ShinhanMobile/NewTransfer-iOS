@@ -41,6 +41,7 @@ class NetworkManager: NetworkProtocol {
 		urlRequest.httpMethod = request.method.rawValue
 		urlRequest.httpBody = encodedModel
 
+		#if DEBUG
 		// Mock 통신 session 분기 처리
 		if NetworkServerConfig.server == .mock {
 			session = MockURLSession<Request>.init(
@@ -48,6 +49,7 @@ class NetworkManager: NetworkProtocol {
 				response: request
 			)
 		}
+		#endif
 
 		let task: URLSessionDataTask = session
 			.dataTask(with: urlRequest) { data, urlResponse, error in
