@@ -14,8 +14,6 @@
 		435F42B02695958E0008B58B /* TransferManager+DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F42AF2695958E0008B58B /* TransferManager+DI.swift */; };
 		435F42B52695974D0008B58B /* TransferManager+DITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F42B42695974D0008B58B /* TransferManager+DITests.swift */; };
 		436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4426952E990002BD8F /* AppDelegate.swift */; };
-		436E1A4926952E990002BD8F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4826952E990002BD8F /* MainViewController.swift */; };
-		436E1A4C26952E990002BD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E1A4A26952E990002BD8F /* Main.storyboard */; };
 		436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436E1A4D26952E990002BD8F /* NewTransfer.xcdatamodeld */; };
 		436E1A5126952E9A0002BD8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436E1A5026952E9A0002BD8F /* Assets.xcassets */; };
 		436E1A5426952E9A0002BD8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E1A5226952E9A0002BD8F /* LaunchScreen.storyboard */; };
@@ -27,7 +25,6 @@
 		7EDFAE6591F08B4ADAA4EC9C /* Pods_NewTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199C9E905C72392357DA6AD1 /* Pods_NewTransfer.framework */; };
 		FA4211D7269D2B910095E9DB /* TransferRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */; };
 		FA4211D8269D2B910095E9DB /* TransferRecipientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */; };
-		FA4211E0269D2C3D0095E9DB /* TransferInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */; };
 		FA4211E6269D2C550095E9DB /* TransferAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211E4269D2C550095E9DB /* TransferAmountViewController.swift */; };
 		FA4211E7269D2C550095E9DB /* TransferAmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4211E5269D2C550095E9DB /* TransferAmountViewController.xib */; };
 		FA4211ED269D2C790095E9DB /* TransferCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */; };
@@ -42,15 +39,18 @@
 		FA421252269D66300095E9DB /* TransferRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421251269D66300095E9DB /* TransferRepositoryProtocol.swift */; };
 		FA421263269D6AD30095E9DB /* TransferRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421262269D6AD30095E9DB /* TransferRepository.swift */; };
 		FA42127D269EC4880095E9DB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42127C269EC4880095E9DB /* Coordinator.swift */; };
-		FA421282269EC51C0095E9DB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421281269EC51C0095E9DB /* AppCoordinator.swift */; };
 		FA421287269EC5660095E9DB /* TransferCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421286269EC5660095E9DB /* TransferCoordinator.swift */; };
-		FA421292269ECE670095E9DB /* TransferRecipientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421291269ECE670095E9DB /* TransferRecipientCoordinator.swift */; };
 		FA4212A1269ECF680095E9DB /* ViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4212A0269ECF680095E9DB /* ViewModelProvider.swift */; };
 		FA4212A6269ECFB00095E9DB /* PresentationDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4212A5269ECFB00095E9DB /* PresentationDependencyProvider.swift */; };
 		FA4212AC269ED02C0095E9DB /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4212AB269ED02C0095E9DB /* ViewModelFactory.swift */; };
-		FA4212B7269ED4AB0095E9DB /* TransferAmountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4212B6269ED4AB0095E9DB /* TransferAmountCoordinator.swift */; };
-		FA4212BC269ED59C0095E9DB /* TransferCompleteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4212BB269ED59C0095E9DB /* TransferCompleteCoordinator.swift */; };
 		FA4212C1269ED6660095E9DB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4212C0269ED6660095E9DB /* MainCoordinator.swift */; };
+		FAF1D7E726A16B0700D78BCB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1D7E526A16B0700D78BCB /* MainViewController.swift */; };
+		FAF1D7E826A16B0700D78BCB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1D7E626A16B0700D78BCB /* MainViewController.xib */; };
+		FAFD455826A660210057F297 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD455726A660210057F297 /* Router.swift */; };
+		FAFD455D26A6604B0057F297 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD455C26A6604B0057F297 /* NavigationRouter.swift */; };
+		FAFD456326A663F00057F297 /* ModalNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD456226A663F00057F297 /* ModalNavigationRouter.swift */; };
+		FAFD456826A664300057F297 /* AppDelegateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD456726A664300057F297 /* AppDelegateRouter.swift */; };
+		FAFD456D26A666D10057F297 /* TransferBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD456C26A666D10057F297 /* TransferBuilder.swift */; };
 		FD21520FB5AAA2695740EBE1 /* Pods_NewTransferTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674E9834D8447B665C70E832 /* Pods_NewTransferTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,8 +81,6 @@
 		435F42B42695974D0008B58B /* TransferManager+DITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferManager+DITests.swift"; sourceTree = "<group>"; };
 		436E1A4126952E990002BD8F /* NewTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E1A4426952E990002BD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		436E1A4826952E990002BD8F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		436E1A4B26952E990002BD8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		436E1A4E26952E990002BD8F /* NewTransfer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewTransfer.xcdatamodel; sourceTree = "<group>"; };
 		436E1A5026952E9A0002BD8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		436E1A5326952E9A0002BD8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 		E20D06CC30F59E113182003F /* Pods-NewTransfer-NewTransferUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTransfer-NewTransferUITests.release.xcconfig"; path = "Target Support Files/Pods-NewTransfer-NewTransferUITests/Pods-NewTransfer-NewTransferUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecipientViewController.swift; sourceTree = "<group>"; };
 		FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecipientViewController.xib; sourceTree = "<group>"; };
-		FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferInfoManager.swift; sourceTree = "<group>"; };
 		FA4211E4269D2C550095E9DB /* TransferAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAmountViewController.swift; sourceTree = "<group>"; };
 		FA4211E5269D2C550095E9DB /* TransferAmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferAmountViewController.xib; sourceTree = "<group>"; };
 		FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompleteViewController.swift; sourceTree = "<group>"; };
@@ -123,15 +120,18 @@
 		FA421251269D66300095E9DB /* TransferRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepositoryProtocol.swift; sourceTree = "<group>"; };
 		FA421262269D6AD30095E9DB /* TransferRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepository.swift; sourceTree = "<group>"; };
 		FA42127C269EC4880095E9DB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		FA421281269EC51C0095E9DB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FA421286269EC5660095E9DB /* TransferCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCoordinator.swift; sourceTree = "<group>"; };
-		FA421291269ECE670095E9DB /* TransferRecipientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecipientCoordinator.swift; sourceTree = "<group>"; };
 		FA4212A0269ECF680095E9DB /* ViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvider.swift; sourceTree = "<group>"; };
 		FA4212A5269ECFB00095E9DB /* PresentationDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationDependencyProvider.swift; sourceTree = "<group>"; };
 		FA4212AB269ED02C0095E9DB /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
-		FA4212B6269ED4AB0095E9DB /* TransferAmountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAmountCoordinator.swift; sourceTree = "<group>"; };
-		FA4212BB269ED59C0095E9DB /* TransferCompleteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompleteCoordinator.swift; sourceTree = "<group>"; };
 		FA4212C0269ED6660095E9DB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FAF1D7E526A16B0700D78BCB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FAF1D7E626A16B0700D78BCB /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		FAFD455726A660210057F297 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FAFD455C26A6604B0057F297 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		FAFD456226A663F00057F297 /* ModalNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationRouter.swift; sourceTree = "<group>"; };
+		FAFD456726A664300057F297 /* AppDelegateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRouter.swift; sourceTree = "<group>"; };
+		FAFD456C26A666D10057F297 /* TransferBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				436E1A4426952E990002BD8F /* AppDelegate.swift */,
-				FA421281269EC51C0095E9DB /* AppCoordinator.swift */,
+				FAFD456726A664300057F297 /* AppDelegateRouter.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -313,6 +313,7 @@
 				FA4211D4269D2B3D0095E9DB /* Complete */,
 				FA421239269D54D40095E9DB /* TransferViewModel.swift */,
 				FA421286269EC5660095E9DB /* TransferCoordinator.swift */,
+				FAFD456C26A666D10057F297 /* TransferBuilder.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -320,8 +321,7 @@
 		FA4211C9269D29790095E9DB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FA4211DF269D2C3D0095E9DB /* TransferInfoManager.swift */,
-				FA42127C269EC4880095E9DB /* Coordinator.swift */,
+				FAFD455626A660020057F297 /* Coordinator */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -338,8 +338,8 @@
 		FA4211CE269D29CF0095E9DB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				436E1A4826952E990002BD8F /* MainViewController.swift */,
-				436E1A4A26952E990002BD8F /* Main.storyboard */,
+				FAF1D7E526A16B0700D78BCB /* MainViewController.swift */,
+				FAF1D7E626A16B0700D78BCB /* MainViewController.xib */,
 				FA4212C0269ED6660095E9DB /* MainCoordinator.swift */,
 			);
 			path = Main;
@@ -351,7 +351,6 @@
 				FA4211D5269D2B910095E9DB /* TransferRecipientViewController.swift */,
 				FA4211D6269D2B910095E9DB /* TransferRecipientViewController.xib */,
 				FA421224269D4C850095E9DB /* TransferRecipientViewModel.swift */,
-				FA421291269ECE670095E9DB /* TransferRecipientCoordinator.swift */,
 			);
 			path = Recipient;
 			sourceTree = "<group>";
@@ -362,7 +361,6 @@
 				FA4211E4269D2C550095E9DB /* TransferAmountViewController.swift */,
 				FA4211E5269D2C550095E9DB /* TransferAmountViewController.xib */,
 				FA42123E269D55650095E9DB /* TransferAmountViewModel.swift */,
-				FA4212B6269ED4AB0095E9DB /* TransferAmountCoordinator.swift */,
 			);
 			path = Amount;
 			sourceTree = "<group>";
@@ -373,7 +371,6 @@
 				FA4211EB269D2C790095E9DB /* TransferCompleteViewController.swift */,
 				FA4211EC269D2C790095E9DB /* TransferCompleteViewController.xib */,
 				FA421243269D564C0095E9DB /* TransferCompleteViewModel.swift */,
-				FA4212BB269ED59C0095E9DB /* TransferCompleteCoordinator.swift */,
 			);
 			path = Complete;
 			sourceTree = "<group>";
@@ -442,6 +439,25 @@
 				FA4212AB269ED02C0095E9DB /* ViewModelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		FAFD455626A660020057F297 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD456126A663DE0057F297 /* Router */,
+				FA42127C269EC4880095E9DB /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FAFD456126A663DE0057F297 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD455726A660210057F297 /* Router.swift */,
+				FAFD455C26A6604B0057F297 /* NavigationRouter.swift */,
+				FAFD456226A663F00057F297 /* ModalNavigationRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,9 +569,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				436E1A5426952E9A0002BD8F /* LaunchScreen.storyboard in Resources */,
+				FAF1D7E826A16B0700D78BCB /* MainViewController.xib in Resources */,
 				FA4211E7269D2C550095E9DB /* TransferAmountViewController.xib in Resources */,
 				436E1A5126952E9A0002BD8F /* Assets.xcassets in Resources */,
-				436E1A4C26952E990002BD8F /* Main.storyboard in Resources */,
 				FA4211EE269D2C790095E9DB /* TransferCompleteViewController.xib in Resources */,
 				FA4211D8269D2B910095E9DB /* TransferRecipientViewController.xib in Resources */,
 			);
@@ -686,9 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA421252269D66300095E9DB /* TransferRepositoryProtocol.swift in Sources */,
-				436E1A4926952E990002BD8F /* MainViewController.swift in Sources */,
 				FA4212A1269ECF680095E9DB /* ViewModelProvider.swift in Sources */,
-				FA421282269EC51C0095E9DB /* AppCoordinator.swift in Sources */,
 				FA42123A269D54D40095E9DB /* TransferViewModel.swift in Sources */,
 				FA4212A6269ECFB00095E9DB /* PresentationDependencyProvider.swift in Sources */,
 				436E1A7F269573F00002BD8F /* TransferManager.swift in Sources */,
@@ -697,6 +711,8 @@
 				4331C0CC269699580038C8AF /* RequestSample.swift in Sources */,
 				FA4212AC269ED02C0095E9DB /* ViewModelFactory.swift in Sources */,
 				FA42124A269D5B3F0095E9DB /* FetchTransferBasicInfo.swift in Sources */,
+				FAFD456D26A666D10057F297 /* TransferBuilder.swift in Sources */,
+				FAFD456826A664300057F297 /* AppDelegateRouter.swift in Sources */,
 				FA42127D269EC4880095E9DB /* Coordinator.swift in Sources */,
 				4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */,
 				FA4211F4269D2C9E0095E9DB /* Recipient.swift in Sources */,
@@ -704,17 +720,17 @@
 				FA4211E6269D2C550095E9DB /* TransferAmountViewController.swift in Sources */,
 				4331C0C72696948E0038C8AF /* NetworkManager.swift in Sources */,
 				FA4211ED269D2C790095E9DB /* TransferCompleteViewController.swift in Sources */,
+				FAFD455D26A6604B0057F297 /* NavigationRouter.swift in Sources */,
 				436E1A4F26952E990002BD8F /* NewTransfer.xcdatamodeld in Sources */,
 				FA421263269D6AD30095E9DB /* TransferRepository.swift in Sources */,
-				FA4212B7269ED4AB0095E9DB /* TransferAmountCoordinator.swift in Sources */,
-				FA4211E0269D2C3D0095E9DB /* TransferInfoManager.swift in Sources */,
+				FAFD455826A660210057F297 /* Router.swift in Sources */,
 				4331C0C2269694840038C8AF /* ApiConfig.swift in Sources */,
+				FAF1D7E726A16B0700D78BCB /* MainViewController.swift in Sources */,
 				FA42122F269D4EDD0095E9DB /* Bank.swift in Sources */,
 				FA4212C1269ED6660095E9DB /* MainCoordinator.swift in Sources */,
-				FA4212BC269ED59C0095E9DB /* TransferCompleteCoordinator.swift in Sources */,
 				435F42B02695958E0008B58B /* TransferManager+DI.swift in Sources */,
+				FAFD456326A663F00057F297 /* ModalNavigationRouter.swift in Sources */,
 				FA4211D7269D2B910095E9DB /* TransferRecipientViewController.swift in Sources */,
-				FA421292269ECE670095E9DB /* TransferRecipientCoordinator.swift in Sources */,
 				FA42123F269D55650095E9DB /* TransferAmountViewModel.swift in Sources */,
 				FA421287269EC5660095E9DB /* TransferCoordinator.swift in Sources */,
 			);
@@ -754,14 +770,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		436E1A4A26952E990002BD8F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				436E1A4B26952E990002BD8F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		436E1A5226952E9A0002BD8F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

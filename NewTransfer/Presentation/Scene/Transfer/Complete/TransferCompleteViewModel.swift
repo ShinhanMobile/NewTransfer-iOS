@@ -8,8 +8,8 @@
 import Foundation
 import RxSwift
 
-protocol TransferCompleteVMCoordiDelegate {
-    func dismissTransferVC()
+protocol TransferCompleteVMCoordinatorDelegate: class {
+    func dismissTransfer()
 }
 
 class TransferCompleteViewModel: TransferViewModel {
@@ -24,23 +24,22 @@ class TransferCompleteViewModel: TransferViewModel {
     }
     
     private let disposeBag = DisposeBag()
-    internal var transferInfoManager: TransferInfoManager
+    internal var transferBuilder: TransferBuilder
+    weak var coordinatorDelegate: TransferCoordinator?
     
-    var coordinatorDelegate: TransferCompleteVMCoordiDelegate?
-    
-    init(transferInfoManager: TransferInfoManager) {
-        self.transferInfoManager = transferInfoManager
+    init(transferBuilder: TransferBuilder) {
+        self.transferBuilder = transferBuilder
     }
     
     func transform(input: Input) -> Output {
         
         return Output(
-            recipient: transferInfoManager.printRecipient(),
-            amount: transferInfoManager.printAmount()
+            recipient: transferBuilder.printRecipient(),
+            amount: transferBuilder.printAmount()
         )
     }
     
     func dismiss() {
-        self.coordinatorDelegate?.dismissTransferVC()
+        self.coordinatorDelegate?.dismissTransfer()
     }
 }

@@ -1,13 +1,13 @@
 //
-//  TransferInfoManager.swift
+//  TransferBuilder.swift
 //  NewTransfer
 //
-//  Created by  60117280 on 2021/07/13.
+//  Created by  60117280 on 2021/07/20.
 //
 
 import Foundation
 
-class TransferInfoManager {
+public class TransferBuilder {
     var trxKey: String?             // 거래 일련번호
     var recipient: Recipient?       // 수취인
     var amount: String?             // 이체 금액
