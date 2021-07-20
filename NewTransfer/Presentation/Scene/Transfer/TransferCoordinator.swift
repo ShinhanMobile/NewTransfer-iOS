@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, TransferAmountVMCoordinatorDelegate, TransferCompleteVMCoordinatorDelegate {
+class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, TransferAmountVMCoordinatorDelegate, TransferCheckVMCoordinatorDelegate,  TransferCompleteVMCoordinatorDelegate {
     
     public var builder: TransferBuilder
     public var children: [Coordinator] = []
@@ -27,21 +27,33 @@ class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, 
         router.present(viewController, animated: animated, onDismissed: onDismissed)
     }
     
-    // MARK - TransferRecipientVMCoordinatorDelegate
+    // MARK: TransferRecipientVMCoordinatorDelegate
     func routeToAmount(transferBuilder: TransferBuilder) {
         builder = transferBuilder
         
         presentAmountViewController()
     }
     
-    // MARK - TransferAmountVMCoordinatorDelegate
-    func routeToComplete(transferBuilder: TransferBuilder) {
+    
+    // MARK: TransferAmountVMCoordinatorDelegate
+    func routeToCheck(transferBuilder: TransferBuilder, parentViewController: UIViewController) {
         builder = transferBuilder
         
-        presentCompleteViewController()
+        presentCheckBottonSheet(parentViewController: parentViewController)
     }
     
-    // MARK - TransferCompleteVMCoordinatorDelegate
+    
+    // MARK: TransferCheckVMCoordinatorDelegate
+    func dismissTransferCheck() {
+        
+    }
+    
+    func routeToComplete() {
+        
+    }
+    
+    
+    // MARK: TransferCompleteVMCoordinatorDelegate
     func dismissTransfer() {
         router.dismiss(animated: true)
     }
@@ -56,6 +68,16 @@ class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, 
         viewModel.coordinateDelegate = self
         let viewController = TransferAmountViewController(viewModel: viewModel)
         router.present(viewController, animated: true)
+    }
+    
+    private func presentCheckBottonSheet(parentViewController: UIViewController) {
+        
+        let viewModel = TransferCheckViewModel(transferBuilder: builder)
+        viewModel.coordinateDelegate = self
+        let viewController = TransferCheckViewController(viewModel: viewModel)
+        
+        let bottomSheet = BottomSheet(childViewController: viewController, isTapDismiss: false, availablePanning: false)
+        bottomSheet.show(presentView: parentViewController)
     }
     
     private func presentCompleteViewController() {

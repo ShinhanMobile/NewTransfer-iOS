@@ -67,6 +67,6 @@ class TransferAmountViewController: UIViewController {
     }
 
     @objc func confirmButtonClicked() {
-        viewModel.routeToCompleteVC()
+        viewModel.routeToCheck(parentViewController: self)
     }
 }
