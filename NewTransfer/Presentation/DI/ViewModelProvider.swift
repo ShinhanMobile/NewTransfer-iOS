@@ -9,22 +9,22 @@ import Foundation
 
 class ViewModelProvider: ViewModelFactory {
     
-    let transferInfoManager: TransferInfoManager
+    let transferBuilder: TransferBuilder
     
-    init(transferInfoManager: TransferInfoManager) {
-        self.transferInfoManager = transferInfoManager
+    init(transferBuilder: TransferBuilder) {
+        self.transferBuilder = transferBuilder
     }
     
     var transferRecipientViewModel: TransferRecipientViewModel {
-        return TransferRecipientViewModel(transferInfoManager: transferInfoManager)
+        return TransferRecipientViewModel(transferBuilder: transferBuilder)
     }
     
     var transferAmountViewModel: TransferAmountViewModel {
-        return TransferAmountViewModel(transferInfoManager: transferInfoManager)
+        return TransferAmountViewModel(transferBuilder: transferBuilder)
     }
     
     var transferCompleteViewModel: TransferCompleteViewModel {
-        return TransferCompleteViewModel(transferInfoManager: transferInfoManager)
+        return TransferCompleteViewModel(transferBuilder: transferBuilder)
     }
     
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TransferViewModel {
-    var transferInfoManager: TransferInfoManager { get set }
+    var transferBuilder: TransferBuilder { get set }
 }

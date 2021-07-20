@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol TransferRecipientVMCoordiDelegate {
-    func routeToAmountVC(transferInfoManager: TransferInfoManager)
+protocol TransferRecipientVMCoordinatorDelegate: class {
+    func routeToAmount(transferBuilder: TransferBuilder)
 }
 
 class TransferRecipientViewModel: TransferViewModel {
@@ -27,13 +27,13 @@ class TransferRecipientViewModel: TransferViewModel {
     private let fetchTransferBasicInfoUseCase = FetchTransferBasicInfoUseCase(transferRepository: TransferRepository())
     
     private let disposeBag = DisposeBag()
-    internal var transferInfoManager: TransferInfoManager
-    var coordinatorDelegate: TransferRecipientVMCoordiDelegate?
+    internal var transferBuilder: TransferBuilder
+    weak var coordinatorDelegate: TransferCoordinator?
     
     init(
-        transferInfoManager: TransferInfoManager
+        transferBuilder: TransferBuilder
     ) {
-        self.transferInfoManager = transferInfoManager
+        self.transferBuilder = transferBuilder
     }
     
     func transform(input: Input) -> Output {
@@ -44,7 +44,7 @@ class TransferRecipientViewModel: TransferViewModel {
         
         recipient.subscribe(onNext: { [weak self] recipient in
             guard let self = self else { return }
-            self.transferInfoManager.recipient = recipient
+            self.transferBuilder.recipient = recipient
         })
         .disposed(by: disposeBag)
         
@@ -59,7 +59,7 @@ class TransferRecipientViewModel: TransferViewModel {
     }
 
     func routeToAmountVC() {
-        self.coordinatorDelegate?.routeToAmountVC(transferInfoManager: self.transferInfoManager)
+        self.coordinatorDelegate?.routeToAmount(transferBuilder: transferBuilder)
     }
     
 }

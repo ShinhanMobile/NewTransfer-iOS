@@ -8,75 +8,62 @@
 import Foundation
 import UIKit
 
-protocol TransferSubCoordiDelegate {
-    func routeToRecipientVC()
-    func routeToAmountVC(_ coordinator: Coordinator, transferInfoManager: TransferInfoManager)
-    func routeToCompleteVC(_ coordinator: Coordinator, transferInfoManager: TransferInfoManager)
-    func dismissTransferVC(_ coordinator: Coordinator)
-}
-
-class TransferCoordinator: Coordinator, TransferSubCoordiDelegate {
+class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, TransferAmountVMCoordinatorDelegate, TransferCompleteVMCoordinatorDelegate {
     
-    var childCoordinators: [Coordinator] = []
+    public var builder: TransferBuilder
+    public var children: [Coordinator] = []
+    public let router: Router
     
-    private var navigationController: UINavigationController
-    private var transferInfoManager: TransferInfoManager
+    public init(router: Router) {
+        self.router = router
+        builder = TransferBuilder()
+    }
     
-    var delegate: MainCoordiDelegate?
-    
-    init(
-        navigationController: UINavigationController
-    ) {
-        self.navigationController = navigationController
+    func present(animated: Bool, onDismissed: (() -> Void)?) {
         
-        transferInfoManager = TransferInfoManager()
+        let viewModel = TransferRecipientViewModel(transferBuilder: builder)
+        viewModel.coordinatorDelegate = self
+        let viewController = TransferRecipientViewController(viewModel: viewModel)
+        router.present(viewController, animated: animated, onDismissed: onDismissed)
     }
     
-    func start() {
-        routeToRecipientVC()
-    }
-    
-    func routeToRecipientVC() {
-        let coordinator = TransferRecipientCoordinator(
-            navigationController: self.navigationController,
-            transferInfoManager: self.transferInfoManager
-        )
-        coordinator.delegate = self
-        coordinator.start()
-        self.childCoordinators.append(coordinator)
-    }
-    
-    func routeToAmountVC(_ coordinator: Coordinator, transferInfoManager: TransferInfoManager) {
-        configureBeforeTransferRoute(coordinator: coordinator, transferInfoManager: transferInfoManager)
+    // MARK - TransferRecipientVMCoordinatorDelegate
+    func routeToAmount(transferBuilder: TransferBuilder) {
+        builder = transferBuilder
         
-        let coordinator = TransferAmountCoordinator(
-            navigationController: self.navigationController,
-            transferInfoManager: self.transferInfoManager
-        )
-        coordinator.delegate = self
-        coordinator.start()
-        self.childCoordinators.append(coordinator)
+        presentAmountViewController()
     }
     
-    func routeToCompleteVC(_ coordinator: Coordinator, transferInfoManager: TransferInfoManager) {
-        configureBeforeTransferRoute(coordinator: coordinator, transferInfoManager: transferInfoManager)
+    // MARK - TransferAmountVMCoordinatorDelegate
+    func routeToComplete(transferBuilder: TransferBuilder) {
+        builder = transferBuilder
         
-        let coordinator = TransferCompleteCoordinator(
-            navigationController: self.navigationController,
-            transferInfoManager: self.transferInfoManager
-        )
-        coordinator.delegate = self
-        coordinator.start()
-        self.childCoordinators.append(coordinator)
+        presentCompleteViewController()
     }
     
-    func dismissTransferVC(_ coordinator: Coordinator) {
-        delegate?.popToMainVC(self)
+    // MARK - TransferCompleteVMCoordinatorDelegate
+    func dismissTransfer() {
+        router.dismiss(animated: true)
     }
     
     
-    private func configureBeforeTransferRoute(coordinator: Coordinator, transferInfoManager: TransferInfoManager) {
-        self.childCoordinators = self.childCoordinators.filter { $0 !== coordinator }
-        self.transferInfoManager = transferInfoManager
+    
+    // MARK: - Present ViewController
+    private func presentAmountViewController() {
+        
+        // TODO: Provider 사용
+        let viewModel = TransferAmountViewModel(transferBuilder: builder)
+        viewModel.coordinateDelegate = self
+        let viewController = TransferAmountViewController(viewModel: viewModel)
+        router.present(viewController, animated: true)
+    }
+    
+    private func presentCompleteViewController() {
+        
+        // TODO: Provider 사용
+        let viewModel = TransferCompleteViewModel(transferBuilder: builder)
+        viewModel.coordinatorDelegate = self
+        let viewController = TransferCompleteViewController(viewModel: viewModel)
+        router.present(viewController, animated: true)
     }
 }
