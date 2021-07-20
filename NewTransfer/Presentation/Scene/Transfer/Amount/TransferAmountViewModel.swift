@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol TransferAmountVMCoordinatorDelegate: class {
-    func routeToComplete(transferBuilder: TransferBuilder)
+    func routeToCheck(transferBuilder: TransferBuilder, parentViewController: UIViewController)
 }
 
 class TransferAmountViewModel: TransferViewModel {
@@ -42,8 +42,11 @@ class TransferAmountViewModel: TransferViewModel {
         return Output(recipient: transferBuilder.printRecipient())
     }
     
-    func routeToCompleteVC() {
-        self.coordinateDelegate?.routeToComplete(transferBuilder: transferBuilder)
+    func routeToCheck(parentViewController: UIViewController) {
+        self.coordinateDelegate?.routeToCheck(
+            transferBuilder: transferBuilder,
+            parentViewController: parentViewController
+        )
     }
     
 }

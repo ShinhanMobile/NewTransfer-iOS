@@ -23,5 +23,15 @@ class TransferRepository: TransferRepositoryProtocol {
         ]))
     }
     
-    
+    func inquiryRecipient(request: InquiryRecipientUseCaseModels.Request) -> Observable<InquiryRecipientUseCaseModels.Response> {
+        
+        // 테스트용 하드코딩
+        if request.bank.name == "신한" && request.accountNumber == "11" {
+            return Observable.just(InquiryRecipientUseCaseModels.Response(recipientName: "양시연"))
+        } else if request.bank.name == "국민" && request.accountNumber == "22" {
+            return Observable.just(InquiryRecipientUseCaseModels.Response(recipientName: "이종호"))
+        } else {
+            return Observable.just(InquiryRecipientUseCaseModels.Response(recipientName: "김은영"))
+        }
+    }
 }

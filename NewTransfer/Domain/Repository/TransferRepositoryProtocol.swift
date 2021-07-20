@@ -10,4 +10,5 @@ import RxSwift
 
 protocol TransferRepositoryProtocol {
     func fetchTransferBasicInfo(request: FetchTransferBasicInfoUseCaseModels.Request) -> Observable<FetchTransferBasicInfoUseCaseModels.Response>
+    func inquiryRecipient(request: InquiryRecipientUseCaseModels.Request) -> Observable<InquiryRecipientUseCaseModels.Response>
 }

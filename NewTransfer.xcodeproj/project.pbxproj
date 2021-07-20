@@ -35,7 +35,7 @@
 		FA42123A269D54D40095E9DB /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421239269D54D40095E9DB /* TransferViewModel.swift */; };
 		FA42123F269D55650095E9DB /* TransferAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42123E269D55650095E9DB /* TransferAmountViewModel.swift */; };
 		FA421244269D564C0095E9DB /* TransferCompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421243269D564C0095E9DB /* TransferCompleteViewModel.swift */; };
-		FA42124A269D5B3F0095E9DB /* FetchTransferBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421249269D5B3F0095E9DB /* FetchTransferBasicInfo.swift */; };
+		FA42124A269D5B3F0095E9DB /* FetchTransferBasicInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421249269D5B3F0095E9DB /* FetchTransferBasicInfoUseCase.swift */; };
 		FA421252269D66300095E9DB /* TransferRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421251269D66300095E9DB /* TransferRepositoryProtocol.swift */; };
 		FA421263269D6AD30095E9DB /* TransferRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA421262269D6AD30095E9DB /* TransferRepository.swift */; };
 		FA42127D269EC4880095E9DB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42127C269EC4880095E9DB /* Coordinator.swift */; };
@@ -51,6 +51,14 @@
 		FAFD456326A663F00057F297 /* ModalNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD456226A663F00057F297 /* ModalNavigationRouter.swift */; };
 		FAFD456826A664300057F297 /* AppDelegateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD456726A664300057F297 /* AppDelegateRouter.swift */; };
 		FAFD456D26A666D10057F297 /* TransferBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD456C26A666D10057F297 /* TransferBuilder.swift */; };
+		FAFD458426A67E600057F297 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD458326A67E600057F297 /* BottomSheet.swift */; };
+		FAFD458B26A67F3B0057F297 /* TransferCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD458926A67F3B0057F297 /* TransferCheckViewController.swift */; };
+		FAFD458C26A67F3B0057F297 /* TransferCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFD458A26A67F3B0057F297 /* TransferCheckViewController.xib */; };
+		FAFD459426A67F500057F297 /* TransferCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD459326A67F500057F297 /* TransferCheckViewModel.swift */; };
+		FAFD45A526A684650057F297 /* InquiryRecipientUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD45A426A684650057F297 /* InquiryRecipientUseCase.swift */; };
+		FAFD45B726A6929C0057F297 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD45B626A6929C0057F297 /* UIView+Extension.swift */; };
+		FAFD45C926A6977C0057F297 /* TransferCheckCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD45C826A6977C0057F297 /* TransferCheckCoordinator.swift */; };
+		FAFD45CE26A698940057F297 /* BottomSheetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD45CD26A698940057F297 /* BottomSheetRouter.swift */; };
 		FD21520FB5AAA2695740EBE1 /* Pods_NewTransferTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674E9834D8447B665C70E832 /* Pods_NewTransferTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +124,7 @@
 		FA421239269D54D40095E9DB /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
 		FA42123E269D55650095E9DB /* TransferAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAmountViewModel.swift; sourceTree = "<group>"; };
 		FA421243269D564C0095E9DB /* TransferCompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompleteViewModel.swift; sourceTree = "<group>"; };
-		FA421249269D5B3F0095E9DB /* FetchTransferBasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTransferBasicInfo.swift; sourceTree = "<group>"; };
+		FA421249269D5B3F0095E9DB /* FetchTransferBasicInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTransferBasicInfoUseCase.swift; sourceTree = "<group>"; };
 		FA421251269D66300095E9DB /* TransferRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepositoryProtocol.swift; sourceTree = "<group>"; };
 		FA421262269D6AD30095E9DB /* TransferRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepository.swift; sourceTree = "<group>"; };
 		FA42127C269EC4880095E9DB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -132,6 +140,14 @@
 		FAFD456226A663F00057F297 /* ModalNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationRouter.swift; sourceTree = "<group>"; };
 		FAFD456726A664300057F297 /* AppDelegateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRouter.swift; sourceTree = "<group>"; };
 		FAFD456C26A666D10057F297 /* TransferBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferBuilder.swift; sourceTree = "<group>"; };
+		FAFD458326A67E600057F297 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		FAFD458926A67F3B0057F297 /* TransferCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCheckViewController.swift; sourceTree = "<group>"; };
+		FAFD458A26A67F3B0057F297 /* TransferCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferCheckViewController.xib; sourceTree = "<group>"; };
+		FAFD459326A67F500057F297 /* TransferCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCheckViewModel.swift; sourceTree = "<group>"; };
+		FAFD45A426A684650057F297 /* InquiryRecipientUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryRecipientUseCase.swift; sourceTree = "<group>"; };
+		FAFD45B626A6929C0057F297 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FAFD45C826A6977C0057F297 /* TransferCheckCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCheckCoordinator.swift; sourceTree = "<group>"; };
+		FAFD45CD26A698940057F297 /* BottomSheetRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +219,7 @@
 				FA4211C5269D295C0095E9DB /* Data */,
 				FA4211C6269D29620095E9DB /* Domain */,
 				FA4211C7269D296A0095E9DB /* Presentation */,
+				FAFD45BB26A692DB0057F297 /* Utils */,
 				436E1A7D269573DE0002BD8F /* TransferManager */,
 				436E1A5526952E9A0002BD8F /* Info.plist */,
 				436E1A4D26952E990002BD8F /* NewTransfer.xcdatamodeld */,
@@ -310,6 +327,7 @@
 			children = (
 				FA4211D2269D2B260095E9DB /* Recipient */,
 				FA4211D3269D2B370095E9DB /* Amount */,
+				FAFD458826A67F220057F297 /* Check */,
 				FA4211D4269D2B3D0095E9DB /* Complete */,
 				FA421239269D54D40095E9DB /* TransferViewModel.swift */,
 				FA421286269EC5660095E9DB /* TransferCoordinator.swift */,
@@ -322,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFD455626A660020057F297 /* Coordinator */,
+				FAFD458326A67E600057F297 /* BottomSheet.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -387,7 +406,8 @@
 		FA4211FB269D2CCF0095E9DB /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				FA421249269D5B3F0095E9DB /* FetchTransferBasicInfo.swift */,
+				FA421249269D5B3F0095E9DB /* FetchTransferBasicInfoUseCase.swift */,
+				FAFD45A426A684650057F297 /* InquiryRecipientUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -456,8 +476,36 @@
 				FAFD455726A660210057F297 /* Router.swift */,
 				FAFD455C26A6604B0057F297 /* NavigationRouter.swift */,
 				FAFD456226A663F00057F297 /* ModalNavigationRouter.swift */,
+				FAFD45CD26A698940057F297 /* BottomSheetRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		FAFD458826A67F220057F297 /* Check */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD458926A67F3B0057F297 /* TransferCheckViewController.swift */,
+				FAFD458A26A67F3B0057F297 /* TransferCheckViewController.xib */,
+				FAFD459326A67F500057F297 /* TransferCheckViewModel.swift */,
+				FAFD45C826A6977C0057F297 /* TransferCheckCoordinator.swift */,
+			);
+			path = Check;
+			sourceTree = "<group>";
+		};
+		FAFD45B526A6927B0057F297 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD45B626A6929C0057F297 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FAFD45BB26A692DB0057F297 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD45B526A6927B0057F297 /* Extension */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +620,7 @@
 				FAF1D7E826A16B0700D78BCB /* MainViewController.xib in Resources */,
 				FA4211E7269D2C550095E9DB /* TransferAmountViewController.xib in Resources */,
 				436E1A5126952E9A0002BD8F /* Assets.xcassets in Resources */,
+				FAFD458C26A67F3B0057F297 /* TransferCheckViewController.xib in Resources */,
 				FA4211EE269D2C790095E9DB /* TransferCompleteViewController.xib in Resources */,
 				FA4211D8269D2B910095E9DB /* TransferRecipientViewController.xib in Resources */,
 			);
@@ -701,6 +750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFD458B26A67F3B0057F297 /* TransferCheckViewController.swift in Sources */,
 				FA421252269D66300095E9DB /* TransferRepositoryProtocol.swift in Sources */,
 				FA4212A1269ECF680095E9DB /* ViewModelProvider.swift in Sources */,
 				FA42123A269D54D40095E9DB /* TransferViewModel.swift in Sources */,
@@ -709,11 +759,16 @@
 				436E1A4526952E990002BD8F /* AppDelegate.swift in Sources */,
 				FA421225269D4C850095E9DB /* TransferRecipientViewModel.swift in Sources */,
 				4331C0CC269699580038C8AF /* RequestSample.swift in Sources */,
+				FAFD45CE26A698940057F297 /* BottomSheetRouter.swift in Sources */,
 				FA4212AC269ED02C0095E9DB /* ViewModelFactory.swift in Sources */,
-				FA42124A269D5B3F0095E9DB /* FetchTransferBasicInfo.swift in Sources */,
+				FA42124A269D5B3F0095E9DB /* FetchTransferBasicInfoUseCase.swift in Sources */,
 				FAFD456D26A666D10057F297 /* TransferBuilder.swift in Sources */,
 				FAFD456826A664300057F297 /* AppDelegateRouter.swift in Sources */,
+				FAFD45A526A684650057F297 /* InquiryRecipientUseCase.swift in Sources */,
 				FA42127D269EC4880095E9DB /* Coordinator.swift in Sources */,
+				FAFD458426A67E600057F297 /* BottomSheet.swift in Sources */,
+				FAFD45C926A6977C0057F297 /* TransferCheckCoordinator.swift in Sources */,
+				FAFD459426A67F500057F297 /* TransferCheckViewModel.swift in Sources */,
 				4371339E269C636C0063DA32 /* MockNetworkManager.swift in Sources */,
 				FA4211F4269D2C9E0095E9DB /* Recipient.swift in Sources */,
 				FA421244269D564C0095E9DB /* TransferCompleteViewModel.swift in Sources */,
@@ -727,6 +782,7 @@
 				4331C0C2269694840038C8AF /* ApiConfig.swift in Sources */,
 				FAF1D7E726A16B0700D78BCB /* MainViewController.swift in Sources */,
 				FA42122F269D4EDD0095E9DB /* Bank.swift in Sources */,
+				FAFD45B726A6929C0057F297 /* UIView+Extension.swift in Sources */,
 				FA4212C1269ED6660095E9DB /* MainCoordinator.swift in Sources */,
 				435F42B02695958E0008B58B /* TransferManager+DI.swift in Sources */,
 				FAFD456326A663F00057F297 /* ModalNavigationRouter.swift in Sources */,
