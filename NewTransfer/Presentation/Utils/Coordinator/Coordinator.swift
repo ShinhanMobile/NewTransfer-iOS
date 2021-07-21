@@ -25,7 +25,7 @@ extension Coordinator {
     
     public func presentChild(_ child: Coordinator, animated: Bool, onDismissed: (() -> Void)? = nil) {
         children.append(child)
-        child.present(animated: animated, onDismissed: { [ weak self, weak child] in
+        child.present(animated: animated, onDismissed: { [weak self, weak child] in
             guard let self = self,
                   let child = child else {
                 return
@@ -36,10 +36,7 @@ extension Coordinator {
     }
     
     private func removeChild(_ child: Coordinator) {
-        guard let index = children.firstIndex(where: { $0 === child }) else {
-            return
-        }
-        children.remove(at: index)
+		children = children.filter { $0 !== child }
     }
 }
 
