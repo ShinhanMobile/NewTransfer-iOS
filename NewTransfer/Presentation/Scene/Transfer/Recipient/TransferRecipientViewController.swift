@@ -48,6 +48,9 @@ class TransferRecipientViewController: UIViewController {
         // 은행 선택
         self.bankNameTextField.inputView = self.bankPickerView
         
+        // 계좌번호 키패드
+        accountTextField.keyboardType = UIKeyboardType.numberPad
+        
         // 확인 버튼
         let toolbar = UIToolbar()
         toolbar.sizeToFit()

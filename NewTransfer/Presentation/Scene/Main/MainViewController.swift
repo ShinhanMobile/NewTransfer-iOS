@@ -7,26 +7,16 @@
 
 import UIKit
 
-protocol MainVCCoordinatorDelegate {
+protocol MainVCCoordinatorDelegate: class {
     func mainVCDidClickTransfer(_ viewController: MainViewController)
 }
 
 class MainViewController: UIViewController {
     
-    weak var coordinatorDelegate: MainCoordinator?
+    weak var coordinatorDelegate: MainVCCoordinatorDelegate?
     
     @IBAction func transferButtonClicked(_ sender: Any) {
         self.coordinatorDelegate?.mainVCDidClickTransfer(self)
-    }
-    
-    init(delegate: MainCoordinator) {
-        self.coordinatorDelegate = delegate
-        
-        super.init(nibName: "MainViewController", bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {

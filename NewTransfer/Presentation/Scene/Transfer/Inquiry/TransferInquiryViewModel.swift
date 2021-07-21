@@ -1,5 +1,5 @@
 //
-//  TransferCheckViewModel.swift
+//  TransferInquiryViewModel.swift
 //  NewTransfer
 //
 //  Created by  60117280 on 2021/07/20.
@@ -8,12 +8,12 @@
 import Foundation
 import RxSwift
 
-protocol TransferCheckVMCoordinatorDelegate {
-    func dismissTransferCheck()
-    func routeToComplete()
+protocol TransferInquiryVMCoordinatorDelegate: class {
+    func cancel()
+    func transferComplete()
 }
 
-class TransferCheckViewModel: TransferViewModel {
+class TransferInquiryViewModel: TransferViewModel {
 
     struct Input {
         // 버튼 누르는 것을 input으로 두어야 할까?
@@ -30,7 +30,7 @@ class TransferCheckViewModel: TransferViewModel {
     
     private let disposeBag = DisposeBag()
     internal var transferBuilder: TransferBuilder
-    weak var coordinateDelegate: TransferCoordinator?
+    weak var coordinateDelegate: TransferInquiryVMCoordinatorDelegate?
     
     init(transferBuilder: TransferBuilder) {
         self.transferBuilder = transferBuilder
@@ -56,11 +56,11 @@ class TransferCheckViewModel: TransferViewModel {
     }
     
     func dismiss() {
-        
+        coordinateDelegate?.cancel()
     }
     
     func transferButtonClicked() {
         // 이체 실행: transferUsecase.excute
-        
+        coordinateDelegate?.transferComplete()
     }
 }
