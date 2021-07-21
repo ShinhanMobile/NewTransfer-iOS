@@ -1,5 +1,5 @@
 //
-//  TransferCheckViewController.swift
+//  TransferInquiryViewController.swift
 //  NewTransfer
 //
 //  Created by  60117280 on 2021/07/20.
@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TransferCheckViewController: UIViewController, FlexibleBottomSheetDelegate {
+class TransferInquiryViewController: UIViewController, FlexibleBottomSheetDelegate {
     
     @IBOutlet weak var recipientNameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -17,20 +17,20 @@ class TransferCheckViewController: UIViewController, FlexibleBottomSheetDelegate
     @IBOutlet weak var bottomSheetContentView: UIView!
     
     @IBAction func cancelButtonClicked(_ sender: Any) {
-        
+        viewModel.dismiss()
     }
     
     @IBAction func transferButtonClicked(_ sender: Any) {
-        
+        viewModel.transferButtonClicked()
     }
     
-    private var viewModel: TransferCheckViewModel
+    private var viewModel: TransferInquiryViewModel
     
     let disposeBag = DisposeBag()
     
-    init(viewModel: TransferCheckViewModel) {
+    init(viewModel: TransferInquiryViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: "TransferCheckViewController", bundle: nil)
+        super.init(nibName: "TransferInquiryViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -49,7 +49,7 @@ class TransferCheckViewController: UIViewController, FlexibleBottomSheetDelegate
     }
     
     private func bind() {
-        let output = viewModel.transform(input: TransferCheckViewModel.Input())
+        let output = viewModel.transform(input: TransferInquiryViewModel.Input())
         
         output.recipientName
             .bind(to: recipientNameLabel.rx.text)

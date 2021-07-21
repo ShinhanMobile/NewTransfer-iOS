@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransferCheckViewController" customModule="NewTransfer" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransferInquiryViewController" customModule="NewTransfer" customModuleProvider="target">
             <connections>
                 <outlet property="amountLabel" destination="dwb-CD-fWC" id="cRg-ie-AWF"/>
                 <outlet property="bottomSheetContentView" destination="fZF-ph-dET" id="2be-4L-YD3"/>

@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 
-class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, TransferAmountVMCoordinatorDelegate, TransferCheckVMCoordinatorDelegate,  TransferCompleteVMCoordinatorDelegate {
+class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, TransferAmountVMCoordinatorDelegate, TransferInquiryVMCoordinatorDelegate, TransferCompleteVMCoordinatorDelegate {
     
-    public var builder: TransferBuilder
     public var children: [Coordinator] = []
     public let router: Router
+    
+    public var builder: TransferBuilder
+    public var bottomSheet: BottomSheet?
+    
     
     public init(router: Router) {
         self.router = router
@@ -27,7 +30,7 @@ class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, 
         router.present(viewController, animated: animated, onDismissed: onDismissed)
     }
     
-    // MARK: TransferRecipientVMCoordinatorDelegate
+    // MARK: - TransferRecipientVMCoordinatorDelegate
     func routeToAmount(transferBuilder: TransferBuilder) {
         builder = transferBuilder
         
@@ -35,25 +38,26 @@ class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, 
     }
     
     
-    // MARK: TransferAmountVMCoordinatorDelegate
-    func routeToCheck(transferBuilder: TransferBuilder, parentViewController: UIViewController) {
+    // MARK: - TransferAmountVMCoordinatorDelegate
+    func routeToInquiry(transferBuilder: TransferBuilder, parentViewController: UIViewController) {
         builder = transferBuilder
         
-        presentCheckBottonSheet(parentViewController: parentViewController)
+        presentInquiryBottomSheet(parentViewController: parentViewController)
     }
     
+    // MARK: - TransferInquiryVMCoordinatorDelegate
+    func cancel() {
+        bottomSheet?.dismissSheet()
+    }
     
-    // MARK: TransferCheckVMCoordinatorDelegate
-    func dismissTransferCheck() {
+    func transferComplete() {
+        bottomSheet?.dismissSheet()
         
+        // TODO: 이체하기를 누르면 비밀번호 떠야 함.
     }
     
-    func routeToComplete() {
-        
-    }
-    
-    
-    // MARK: TransferCompleteVMCoordinatorDelegate
+
+    // MARK: - TransferCompleteVMCoordinatorDelegate
     func dismissTransfer() {
         router.dismiss(animated: true)
     }
@@ -70,14 +74,15 @@ class TransferCoordinator: Coordinator, TransferRecipientVMCoordinatorDelegate, 
         router.present(viewController, animated: true)
     }
     
-    private func presentCheckBottonSheet(parentViewController: UIViewController) {
+    private func presentInquiryBottomSheet(parentViewController: UIViewController) {
         
-        let viewModel = TransferCheckViewModel(transferBuilder: builder)
+        let viewModel = TransferInquiryViewModel(transferBuilder: builder)
         viewModel.coordinateDelegate = self
-        let viewController = TransferCheckViewController(viewModel: viewModel)
-        
-        let bottomSheet = BottomSheet(childViewController: viewController, isTapDismiss: false, availablePanning: false)
-        bottomSheet.show(presentView: parentViewController)
+        let viewController = TransferInquiryViewController(viewModel: viewModel)
+        // 바텀 시트는 그 안에서 또 화면을 띄우지 않고 한번밖에 못띄우기 때문에 router로 만들지 않아도 될 듯
+        // router로 만들면 router 안에 init을 여러개 만들어야 함
+        bottomSheet = BottomSheet(childViewController: viewController)
+        bottomSheet?.show(presentView: parentViewController)
     }
     
     private func presentCompleteViewController() {

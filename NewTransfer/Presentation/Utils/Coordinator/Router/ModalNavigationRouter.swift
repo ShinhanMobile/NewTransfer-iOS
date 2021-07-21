@@ -9,13 +9,19 @@ import UIKit
 
 public class ModalNavigationRouter: NSObject {
     
-    public unowned let parentViewController: UIViewController
+    public let parentViewController: UIViewController
     
     private let navigationController = UINavigationController()
     private var onDismissForViewController: [UIViewController: (() -> Void)] = [:]
     
-    public init(parentViewController: UIViewController) {
+    private var modalPresentationStyle: UIModalPresentationStyle
+    
+    public init(
+        parentViewController: UIViewController,
+        modalPresentationStyle: UIModalPresentationStyle = .overFullScreen
+    ) {
         self.parentViewController = parentViewController
+        self.modalPresentationStyle = modalPresentationStyle
         
         super.init()
         
@@ -37,7 +43,7 @@ extension ModalNavigationRouter: Router {
     private func presentModally(_ viewController: UIViewController, animated: Bool) {
         addCloseButton(to: viewController)
         navigationController.setViewControllers([viewController], animated: false)
-        navigationController.modalPresentationStyle = .overFullScreen
+        navigationController.modalPresentationStyle = self.modalPresentationStyle
         parentViewController.present(navigationController, animated: animated, completion: nil)
     }
     

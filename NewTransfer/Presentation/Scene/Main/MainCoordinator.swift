@@ -17,7 +17,8 @@ class MainCoordinator: Coordinator, MainVCCoordinatorDelegate {
     }
     
     func present(animated: Bool, onDismissed: (() -> Void)?) {
-        let viewController = MainViewController(delegate: self)
+        let viewController = MainViewController()
+        viewController.coordinatorDelegate = self
         router.present(viewController, animated: animated, onDismissed: onDismissed)
     }
     

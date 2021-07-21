@@ -36,6 +36,7 @@ class TransferAmountViewController: UIViewController {
         
         // 보낼 금액 키패드
         self.amountTextField.keyboardType = UIKeyboardType.numberPad
+        self.amountTextField.becomeFirstResponder()
         
         // 확인 버튼
         let toolbar = UIToolbar()
@@ -67,6 +68,7 @@ class TransferAmountViewController: UIViewController {
     }
 
     @objc func confirmButtonClicked() {
-        viewModel.routeToCheck(parentViewController: self)
+        amountTextField.resignFirstResponder()
+        viewModel.routeToInquiry(parentViewController: self)
     }
 }

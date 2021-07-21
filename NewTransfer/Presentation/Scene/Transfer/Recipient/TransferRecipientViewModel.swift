@@ -28,7 +28,7 @@ class TransferRecipientViewModel: TransferViewModel {
     
     private let disposeBag = DisposeBag()
     internal var transferBuilder: TransferBuilder
-    weak var coordinatorDelegate: TransferCoordinator?
+    weak var coordinatorDelegate: TransferRecipientVMCoordinatorDelegate?
     
     init(
         transferBuilder: TransferBuilder

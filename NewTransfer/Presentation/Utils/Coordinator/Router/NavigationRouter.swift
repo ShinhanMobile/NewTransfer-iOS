@@ -58,9 +58,7 @@ extension NavigationRouter: UINavigationControllerDelegate {
               !navigationController.viewControllers.contains(dismissedViewController) else {
             return
         }
-
-        print("dismiss!!")
-        
+    
         performOnDismissed(for: dismissedViewController)
     }
 }
