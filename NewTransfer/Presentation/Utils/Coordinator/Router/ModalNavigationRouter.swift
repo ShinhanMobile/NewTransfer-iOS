@@ -8,7 +8,7 @@
 import UIKit
 
 public class ModalNavigationRouter: NSObject {
-    
+
     public let parentViewController: UIViewController
     
     private let navigationController = UINavigationController()
@@ -41,29 +41,29 @@ extension ModalNavigationRouter: Router {
     }
     
     private func presentModally(_ viewController: UIViewController, animated: Bool) {
-        addCloseButton(to: viewController)
+		addCloseButton(to: viewController)
         navigationController.setViewControllers([viewController], animated: false)
         navigationController.modalPresentationStyle = self.modalPresentationStyle
         parentViewController.present(navigationController, animated: animated, completion: nil)
     }
-    
-    private func addCloseButton(to viewController: UIViewController) {
-        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "닫기",
-            style: .plain,
-            target: self,
-            action: #selector(cancelPressed)
-        )
-    }
-    
-    @objc private func cancelPressed() {
-        performOnDismissed(for: navigationController.viewControllers.first!)
-        dismiss(animated: true)
-    }
+
+	private func addCloseButton(to viewController: UIViewController) {
+		viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(
+			title: "닫기",
+			style: .plain,
+			target: self,
+			action: #selector(cancelPressed)
+		)
+	}
+
+	@objc private func cancelPressed() {
+		performOnDismissed(for: navigationController.viewControllers.first!)
+		dismiss(animated: true)
+	}
     
     public func dismiss(animated: Bool) {
         performOnDismissed(for: navigationController.viewControllers.first!)
-        parentViewController.dismiss(animated: animated, completion: nil)
+		parentViewController.dismiss(animated: animated, completion: nil)
     }
     
     private func performOnDismissed(for viewController: UIViewController) {
